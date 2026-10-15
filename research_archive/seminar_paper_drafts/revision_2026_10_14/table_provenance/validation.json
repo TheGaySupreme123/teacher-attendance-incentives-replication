@@ -1,0 +1,81 @@
+{
+  "pages": 18,
+  "main_pages": 12,
+  "reference_pages": 2,
+  "appendix_pages": 4,
+  "changed_paragraphs": [
+    {
+      "index": 23,
+      "before": "Table 1 Replication of attendance and departure effects",
+      "after": "Table 1 Replication of original Table 2 Panel A and Table 10"
+    },
+    {
+      "index": 24,
+      "before": "Notes. Coefficients are in probability units; school-clustered standard errors appear in parentheses. Attendance uses random school visits in the original September 2003\u2013February 2006 construction. Departure uses children and the latest up to five observed open-school checks. The government-school marker and residual retain the original reason-code convention. Each model includes an intercept and treatment assignment. Sources: original Tables 2 and 10, raw data, and Python reconstructions. No significance stars are used.",
+      "after": "Notes. Original table numbers refer to Duflo, Hanna, and Ryan (2012). Coefficients are in probability units; school-clustered standard errors appear in parentheses. Attendance uses random visits in September 2003\u2013February 2006; N counts visits. Departure uses children and the latest up to five observed open-school checks; N counts children. The government-school marker and residual retain the original reason-code convention. Models include an intercept and treatment assignment. Sources: original Tables 2 and 10, raw data, and Python reconstructions."
+    },
+    {
+      "index": 25,
+      "before": "Table 1 reproduces the main attendance result. Schools are open at 78.7 percent of treatment visits and 58.0 percent of control visits. The estimated difference is 0.207, with a clustered standard error of 0.030. Both round to the published values. The corresponding 95 percent confidence interval is 14.9 to 26.6 percentage points.",
+      "after": "Table 1 reports both replications: original Table 2, Panel A, for attendance and original Table 10 for departure. Schools are open at 78.7 percent of treatment visits and 58.0 percent of control visits. The estimated difference is 0.207, with a clustered standard error of 0.030. Both round to the published values. The corresponding 95 percent confidence interval is 14.9 to 26.6 percentage points."
+    },
+    {
+      "index": 26,
+      "before": "The Table 10 reconstruction also matches the published coefficients and standard errors at their reported precision. Total recorded departure increases by 8.4 percentage points. The government-school marker increases by 10.1 points, and residual departure changes by -1.8 points. The reconstructed child outcomes agree with the distributed reference records. Matching these results establishes fidelity to the implemented measure, while leaving its educational interpretation open.",
+      "after": "The departure rows in Table 1 also match the coefficients and standard errors in original Table 10 at their reported precision. Total recorded departure increases by 8.4 percentage points. The government-school marker increases by 10.1 points, and residual departure changes by -1.8 points. The reconstructed child outcomes agree with the distributed reference records. Matching these results establishes fidelity to the implemented measure, while leaving its educational interpretation open."
+    },
+    {
+      "index": 42,
+      "before": "Table 2 Recorded departure by treatment and baseline writing",
+      "after": "Table 2 Extension of original Table 10 by baseline writing"
+    },
+    {
+      "index": 54,
+      "before": "Table 3 Baseline writing interactions across departure outcomes",
+      "after": "Table 3 Extension of original Table 10 across departure outcomes"
+    }
+  ],
+  "table1_added_column": "Original table",
+  "mapping": [
+    "Table 2 Panel A",
+    "Table 10",
+    "Table 10",
+    "Table 10"
+  ],
+  "numeric_cells_unchanged": true,
+  "other_tables_unchanged": true,
+  "equation_and_figure_unchanged": true,
+  "docx_sha256": "d3ee10cd6c05dd221af10bd97310541b1da30666c5a28de923f5f32d09a58d48",
+  "pdf_sha256": "00c285f327f426ebf49ee2ab093cf83010689e1480db2dce5741e8b6c8ecd796",
+  "page_image_hashes": {
+    "page-15.png": "3bd28e35565f47c696818010e4cd8c1cb2f48f7664696e2158812762f207e5c6",
+    "page-14.png": "696fd530edeaf1ede3f19667fa402a8516fde9cf7988e6aff735f2990207fcef",
+    "page-16.png": "b15d1486554301620a5d2de4164144266e71a702db1d22beb1ee14e0deb32f44",
+    "page-17.png": "7f422f66c3b76b4a6a4dc673755467babe3e6b4a892a82eed150cbf329f785b9",
+    "page-13.png": "6ed93c7407016093bf028ba6ea738a484d87858ca7246730ed7c788c7ec3afbb",
+    "page-12.png": "f4a5ed23c31deb2342db5242672f96a9909f739e09569499e3148dad379a83fe",
+    "page-10.png": "e17c5a0b498b0882ab46eb20658f96e2bd1b793b1c3424aeb5776ec7c91f8369",
+    "page-11.png": "e73eba6f84fde0d8ce60bb362dde988f5f589fc0c2591d41f49f089ea524d4a8",
+    "page-1.png": "215cc9814821256a615a53648a0e9bf09762b6ceca79b5ce353da19490ec931f",
+    "page-3.png": "519db27ff476d1854bbc7b944975f8af69b99d3921c32e72fcaaab2852840a36",
+    "page-2.png": "4a6171ccfb4ffe033ad9ec323b9a52006caa55c4d23363b3f2b3aaf701f5257d",
+    "page-6.png": "a5402bd2735863a909c06d73fa65564919cbb99e4611c3165a9999f72dc9bab1",
+    "page-7.png": "af0b427b131fe029f5bf66d9e731c0f0b551c7601923c6612929118b5e3ad5dc",
+    "page-5.png": "624a1ba4bd6e2816cc2650a22e4daa4ec05b4d2bf1449e198bf2905b27a93c23",
+    "page-4.png": "cdab18672049ca8f4219872aa51ea4df99665deb79d922f90cd3afa88a5b367d",
+    "page-9.png": "3b3bd512072c703cdc92a34b47af82fbeaa410fae33474de89d493db4eef183e",
+    "page-8.png": "fb466b6956acbc7f0efcd00bebde0a252b7c14ec840a41e5fa5857b203b00ab1",
+    "page-18.png": "49206446beaf9f9ec9ba9f3f707affadac69e2693c705c1e56f0cd72c4da3b59"
+  },
+  "changed_page_images": [
+    "page-5.png",
+    "page-8.png",
+    "page-10.png"
+  ],
+  "visual_qa": {
+    "1-4,6-7,9": "requirements_review",
+    "5,8,10": "root",
+    "11-18": "repro_verifier",
+    "all_pages": "clean at original resolution"
+  }
+}

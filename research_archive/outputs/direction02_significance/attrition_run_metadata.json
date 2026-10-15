@@ -1,0 +1,45 @@
+{
+  "command": "python3 scripts/run_direction02_attrition.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T10:45:25.820484+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "numpy": "1.26.4",
+  "pandas": "2.3.0",
+  "scipy": "1.15.3",
+  "git_commit": "dcca6f065c7dd0806e1fb483289cbf0bd090dab3",
+  "bootstrap_seed": 20260922,
+  "bootstrap_draws": 999,
+  "propensity_variables": [
+    "treat",
+    "score_z",
+    "treat_score_z",
+    "pre_total_v",
+    "pre_total_w",
+    "pre_writ",
+    "block_2",
+    "block_3",
+    "block_4",
+    "block_5"
+  ],
+  "geographic_block_columns": [
+    "block_2",
+    "block_3",
+    "block_4",
+    "block_5"
+  ],
+  "score_reference_schools": 107,
+  "score_reference_mean": 34.261680603027344,
+  "score_reference_sd": 10.463175773620605,
+  "missing_at_random_assumption": "Outcome observation is independent of the unobserved post outcome conditional on treatment, score, treatment-by-score, observed baseline achievement/writing, and fixed geographic block.",
+  "positivity_assumption": "Every eligible baseline row has a nonzero probability of an observed post outcome under the fixed design.",
+  "bootstrap_summary": {
+    "requested_draws": 999,
+    "valid_draws": 999,
+    "invalid_draws": 0,
+    "bootstrap_seed": 20260922,
+    "ci_low": -0.0033322132011041616,
+    "ci_high": 0.27905742011632295,
+    "two_sided_sign_fraction_p": 0.062062062062062065
+  }
+}

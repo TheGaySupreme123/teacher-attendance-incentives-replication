@@ -1,0 +1,56 @@
+{
+  "output": "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/reviews_2026_10_14/06_Shay_Rewrite_Annotated_Review_A4.docx",
+  "source": "/Users/shayb/.codex/attachments/53e7c588-1bdb-4295-8899-1e9d4bb647f0/Pasted text.txt",
+  "source_lines": 53,
+  "annotation_count": 46,
+  "categories": {
+    "Correction": 30,
+    "Clarity": 7,
+    "Requirement": 9
+  },
+  "protected_source_sha256_before": {
+    "/Users/shayb/.codex/attachments/53e7c588-1bdb-4295-8899-1e9d4bb647f0/Pasted text.txt": "104729e8f8e22b523437a61056959453c662d63f1e1f1dd47120a4178a1ace40",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/01_Main_Paper_Academic_Revision_A4.docx": "d3ee10cd6c05dd221af10bd97310541b1da30666c5a28de923f5f32d09a58d48",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/01_Main_Paper_Academic_Revision_A4.pdf": "00c285f327f426ebf49ee2ab093cf83010689e1480db2dce5741e8b6c8ecd796",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/revision_2026_10_12/source/01_main_paper_academic_revision.md": "ee267ae9a199230ea8816bd03ca9aa7f43a96c74d6e37ddf7f3848a77ffecdd6"
+  },
+  "protected_source_sha256_after": {
+    "/Users/shayb/.codex/attachments/53e7c588-1bdb-4295-8899-1e9d4bb647f0/Pasted text.txt": "104729e8f8e22b523437a61056959453c662d63f1e1f1dd47120a4178a1ace40",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/01_Main_Paper_Academic_Revision_A4.docx": "d3ee10cd6c05dd221af10bd97310541b1da30666c5a28de923f5f32d09a58d48",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/01_Main_Paper_Academic_Revision_A4.pdf": "00c285f327f426ebf49ee2ab093cf83010689e1480db2dce5741e8b6c8ecd796",
+    "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/revision_2026_10_12/source/01_main_paper_academic_revision.md": "ee267ae9a199230ea8816bd03ca9aa7f43a96c74d6e37ddf7f3848a77ffecdd6"
+  },
+  "all_source_prose_preserved": true,
+  "original_equation_terms_preserved": true,
+  "native_equations": 2,
+  "review_notes_are_parenthetical": true,
+  "rendered_pages": 15,
+  "all_pages_visually_reviewed": true,
+  "visual_review_assignments": {
+    "root": [
+      1,
+      2,
+      3
+    ],
+    "evidence_review": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "repro_verifier": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "requirements_review": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "output_sha256": "74dc70029c16021b24d0a804f0e689dc96e17ad6ac4479d0871e8b571678e88c",
+  "final_checks": "Source prose and original equation terms preserved; protected files unchanged; separate parenthetical annotations; native equations; all pages visually checked."
+}

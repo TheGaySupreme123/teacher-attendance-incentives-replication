@@ -1,0 +1,19 @@
+{
+  "pages": 19,
+  "main_pages": 12,
+  "reference_pages": 2,
+  "appendix_pages": 5,
+  "abstract_words": 136,
+  "AI_statement_user_corrections_applied": true,
+  "changed_rendered_pages_since_full_visual_review": [
+    "page-12.png",
+    "page-19.png"
+  ],
+  "all_pages_visually_checked": true,
+  "pdf_sha256": "63dca2ed47b73f06537011fc125569a7a349990edc831418c6024d9d52235d20",
+  "zip_sha256": "b5bed204bb521ba06d782ef2e952cfdfdc495f826ff8811ca4b32e6c4ce46141",
+  "preserved_conversation_records_wording_updated": true,
+  "github_repository_url": "https://github.com/TheGaySupreme123/teacher-attendance-incentives-replication",
+  "github_hyperlink_verified_page": 19,
+  "appendix_AI_assistance_disclosed": true
+}

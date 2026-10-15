@@ -1,0 +1,7 @@
+sample,rows_source_units,unique_student_keys,schools,control_rows,treated_rows,control_schools,treated_schools,post_outcome_observed_rows,post_outcome_missing_rows,teacher_score_missing_rows,score_reference_schools,score_reference_mean,score_reference_sd
+all_post_after_source_exclusions,3399,3374,113,1650,1749,56,57,2859,540,201,107,34.261680603027344,10.463175773620605
+baseline_achievement_observed,2245,2228,113,1102,1143,56,57,1737,508,141,107,34.261680603027344,10.463175773620605
+source_eligible_score_complete_including_no_baseline_total,2200,2184,107,1115,1085,54,53,1700,500,0,107,34.261680603027344,10.463175773620605
+baseline_achievement_score_complete_cohort,2104,2089,107,1052,1052,54,53,1625,479,0,107,34.261680603027344,10.463175773620605
+no_synthetic_outcome_complete_case,1625,1610,101,835,790,52,49,1625,0,0,107,34.261680603027344,10.463175773620605
+source_compatible_audited_score_sample,1646,1631,103,848,798,53,50,1625,21,0,107,34.261680603027344,10.463175773620605

@@ -1,0 +1,662 @@
+[
+  {
+    "source_line": 1,
+    "before": " (edited)",
+    "after": "",
+    "reason": "Remove editor metadata from manuscript title."
+  },
+  {
+    "source_line": 2,
+    "before": "Oct 14, 2026 · @Shay",
+    "after": "",
+    "reason": "Remove editor metadata from manuscript body."
+  },
+  {
+    "source_line": 5,
+    "before": "study whether monitoring affects teacher absenteeism.",
+    "after": "study whether camera monitoring and attendance-linked pay reduce teacher absenteeism and improve learning. They find about a 21-percentage-point reduction in teacher absence and a 0.17-standard-deviation gain in test scores.",
+    "reason": "State original question and headline findings before the selected replication."
+  },
+  {
+    "source_line": 5,
+    "before": "randomize schools to monitoring via photographs",
+    "after": "randomize schools to a package of camera monitoring and attendance-linked pay",
+    "reason": "Identify the randomized package."
+  },
+  {
+    "source_line": 6,
+    "before": "the control group continued to receive surprise visits from researchers",
+    "after": "researchers measured attendance through surprise visits in both treatment and control schools",
+    "reason": "Clarify research measurement in both arms."
+  },
+  {
+    "source_line": 7,
+    "before": "Duflo, Hanna and Ryan in a replication package (E112523V1) which consisted",
+    "after": "Duflo, Hanna and Ryan (2019) in a replication package (E112523V1), which consists",
+    "reason": "Separate dataset provenance from the journal article."
+  },
+  {
+    "source_line": 7,
+    "before": "the paper’s Table 2 (which includes main results) and Table 10 (which reports effects on average departure)",
+    "after": "the pooled all-teacher result in the paper’s original Table 2, Panel A, and all three departure rows in its Table 10",
+    "reason": "Limit replication claim to actually reproduced results."
+  },
+  {
+    "source_line": 7,
+    "before": "in Python.",
+    "after": "in Python. Software and reproduction details appear in Appendix D.",
+    "reason": "Provide a concise reproducibility pointer to the existing full-paper appendix."
+  },
+  {
+    "source_line": 7,
+    "before": "continue with the extension on my own",
+    "after": "add the extension described below",
+    "reason": "Avoid an implication of unassisted work."
+  },
+  {
+    "source_line": 8,
+    "before": "In Table 2,",
+    "after": "In the original Table 2, Panel A,",
+    "reason": "Distinguish original tables from the new tables."
+  },
+  {
+    "source_line": 9,
+    "before": "I match the results in Table 2 of",
+    "after": "I match the pooled result in the original Table 2, Panel A, of",
+    "reason": "Specify selected attendance replication."
+  },
+  {
+    "source_line": 9,
+    "before": "As in the original table, schools were open",
+    "after": "In my reconstruction, schools were open",
+    "reason": "Distinguish finer reconstruction precision from the published values."
+  },
+  {
+    "source_line": 9,
+    "before": "with SEs clustered at the school level in parentheses, is 0.207, SE 0.030",
+    "after": "with SEs clustered at the school level in parentheses, is 0.207 (0.030)",
+    "reason": "Align wording and SE display."
+  },
+  {
+    "source_line": 9,
+    "before": "I match all results",
+    "after": "I match these published values",
+    "reason": "Do not claim reproduction of every Table 2 specification."
+  },
+  {
+    "source_line": 9,
+    "before": "[14.9, 26.6].",
+    "after": "[14.9, 26.6] percentage points. Table 1 reports both the attendance and departure replications.",
+    "reason": "Supply CI units and refer to the actual replication exhibit."
+  },
+  {
+    "source_line": 9,
+    "before": "The 95% confidence interval is [14.9, 26.6] percentage points.",
+    "after": "Expressed in percentage points, the 95% confidence interval is [14.9, 26.6].",
+    "reason": "Make the conversion from the probability-unit coefficient explicit."
+  },
+  {
+    "source_line": 10,
+    "before": "and report standard errors",
+    "after": "and reports standard errors",
+    "reason": "Repair subject-verb agreement."
+  },
+  {
+    "source_line": 10,
+    "before": "select the last five times they were checked",
+    "after": "select the latest up to five times they were checked",
+    "reason": "Account for incomplete observed histories."
+  },
+  {
+    "source_line": 10,
+    "before": "in those five instances",
+    "after": "in those selected instances",
+    "reason": "Keep the rule consistent for children with fewer than five checks."
+  },
+  {
+    "source_line": 10,
+    "before": "then this child has left",
+    "after": "then this child is classified as having departed under this rule",
+    "reason": "Qualify the operational endpoint."
+  },
+  {
+    "source_line": 10,
+    "before": "The dependent variables are (1) an indicator for departure and (2) an indicator for departure for which we know the child moved to a government school.",
+    "after": "The dependent variables are (1) recorded departure, (2) a government-school marker among recorded departures, and (3) residual departure, equal to recorded departure minus the marker.",
+    "reason": "Include all three original Table 10 outcome rows."
+  },
+  {
+    "source_line": 11,
+    "before": "These files provide information on school id × child id and can be merged on to random checks using these identifiers and on to baseline data using these identifiers and random check time period = baseline.",
+    "after": "I merge these roster files on to school random checks using school id and visit date, and on to child enrollment and baseline writing records using school id × child id.",
+    "reason": "Correct the implemented join keys."
+  },
+  {
+    "source_line": 11,
+    "before": "Although parts of this process are unclear to me,",
+    "after": "Some attendance codes lack documented meanings, and the reason fields differ in type.",
+    "reason": "Identify actual ambiguities precisely."
+  },
+  {
+    "source_line": 11,
+    "before": "In many instances the departure reason is blank; I code these as having left but the destination unknown.",
+    "after": "In many instances the reason is blank; a blank does not itself classify a child as departed or supply a government-school marker. The marker equals one for a child classified as departed with reason “2” in at least one selected record.",
+    "reason": "Separate attendance classification from reason markers."
+  },
+  {
+    "source_line": 11,
+    "before": "whether we know a child went to government school",
+    "after": "the recorded government-school marker",
+    "reason": "Avoid claiming verified transfers."
+  },
+  {
+    "source_line": 11,
+    "before": "whether or not we know that a child went to a government school",
+    "after": "whether the selected records contain a government-school reason marker",
+    "reason": "Define the recorded rather than independently verified endpoint."
+  },
+  {
+    "source_line": 12,
+    "before": "Treatment causes a statistically significant 8.4pp increase in departure, and a 10.1pp increase in departure to government schools.",
+    "after": "Assignment to the bundled program causes a statistically significant 8.4-percentage-point increase in recorded departure (SE 4.1 points, p = .044), and a 10.1-point increase in the government-school marker (SE 3.5 points).",
+    "reason": "Retain supported significance while qualifying endpoints and showing uncertainty."
+  },
+  {
+    "source_line": 12,
+    "before": "a 10.1-point increase",
+    "after": "a 10.1-percentage-point increase",
+    "reason": "Use explicit percentage-point units."
+  },
+  {
+    "source_line": 13,
+    "before": "−1.8 point change in residual departure.",
+    "after": "−1.8-percentage-point change in residual departure (SE 3.1 points, p = .564).",
+    "reason": "Provide consistent units and uncertainty."
+  },
+  {
+    "source_line": 13,
+    "before": "all child-level reference values",
+    "after": "the child-level departure indicators",
+    "reason": "Limit the matching claim to verified endpoints."
+  },
+  {
+    "source_line": 16,
+    "before": "children who were better prepared to enter government schools (as proxied by participating in the written baseline test)",
+    "after": "children who were better prepared to enter government schools (with written baseline-test status used as a coarse preparation proxy)",
+    "reason": "Retain motivation while qualifying the proxy."
+  },
+  {
+    "source_line": 16,
+    "before": "whether writers and nonwriters differ in departures, regardless of whether those departures are due to entry to government schools or drop-out from education more broadly",
+    "after": "whether the treatment effect on recorded departure differs between writers and nonwriters, with or without a government-school marker",
+    "reason": "State the interaction estimand and avoid an unobserved dropout claim."
+  },
+  {
+    "source_line": 17,
+    "before": "In Table 4, I estimate",
+    "after": "I estimate",
+    "reason": "Remove inconsistent table number before the equation."
+  },
+  {
+    "source_line": 18,
+    "before": "Y_{isc} = \\alpha_s + \\gamma_{sc} + \\lambda_c + \\tau_{isc} \\times T_{sc} + \\delta_{isc} \\times (W_{ic} \\times T_{sc}) + \\varepsilon_{ics} \\qquad (1)",
+    "after": "Y_{is} = \\alpha + \\tau T_s + \\beta W_{is} + \\delta(T_s \\times W_{is}) + \\varepsilon_{is} \\qquad (1)",
+    "reason": "Replace with the actual saturated model."
+  },
+  {
+    "source_line": 19,
+    "before": "α_s + γ_sc + τ_isc + δ_isc",
+    "after": "α + β + τ + δ",
+    "reason": "Use common coefficients and the corrected four cell means."
+  },
+  {
+    "source_line": 19,
+    "before": "α_s + γ_sc",
+    "after": "α + β",
+    "reason": "Use common coefficients and the corrected four cell means."
+  },
+  {
+    "source_line": 19,
+    "before": "α_s + τ_isc",
+    "after": "α + τ",
+    "reason": "Use common coefficients and the corrected four cell means."
+  },
+  {
+    "source_line": 19,
+    "before": "α_s",
+    "after": "α",
+    "reason": "Use common coefficients and the corrected four cell means."
+  },
+  {
+    "source_line": 19,
+    "before": "Y is an indicator for departure",
+    "after": "Y is the binary outcome being analyzed",
+    "reason": "The same equation is fitted to each of the three defined outcomes."
+  },
+  {
+    "source_line": 19,
+    "before": "Standard errors clustered",
+    "after": "School-clustered standard errors",
+    "reason": "Clarify the covariance calculation without a sentence fragment."
+  },
+  {
+    "source_line": 19,
+    "before": " at the school level",
+    "after": "",
+    "reason": "Avoid repeating the clustering level."
+  },
+  {
+    "source_line": 19,
+    "before": "account for covariance with δ",
+    "after": "account for covariance between τ and δ",
+    "reason": "Identify the variance of the writer linear combination."
+  },
+  {
+    "source_line": 20,
+    "before": "The table reports three different outcomes in Y.",
+    "after": "I estimate the model for three different outcomes in Y.",
+    "reason": "Prepare for the later complete Table 3 exhibit."
+  },
+  {
+    "source_line": 20,
+    "before": "known to be attending a government school at follow-up",
+    "after": "classified as departed and has a government-school reason marker in at least one selected record",
+    "reason": "Use the actual recorded government marker."
+  },
+  {
+    "source_line": 20,
+    "before": "follow-up-up 9,999 Rademacher randomization draws",
+    "after": "use 9,999 school-level Rademacher wild-bootstrap-t draws",
+    "reason": "Correct the bootstrap procedure and typo."
+  },
+  {
+    "source_line": 20,
+    "before": "The table reports wild bootstrap p-values for τ + δ (the departure rate differential for “Writers” relative to “nonwriters”) adjusted for multiple hypothesis testing using the procedure of Holm (1979).",
+    "after": "The null sets δ = 0 while leaving the treatment and writing main effects unrestricted. Table 3 reports p-values for δ, the writer-minus-nonwriter difference in treatment effects. I adjust the conventional school-clustered p-values across the three outcomes using Holm (1979), and report wild-bootstrap p-values separately.",
+    "reason": "Correct the tested coefficient and which p-values receive Holm adjustment."
+  },
+  {
+    "source_line": 40,
+    "before": "and Duflo, Hanna and Ryan (2012) report it as exploratory. ",
+    "after": "",
+    "reason": "Remove the false attribution and sentence fragment."
+  },
+  {
+    "source_line": 40,
+    "before": "these children as high achievers",
+    "after": "baseline writers as better prepared",
+    "reason": "Keep proxy language consistent."
+  },
+  {
+    "source_line": 40,
+    "before": ", any more than residual departure is actually a residual category.",
+    "after": ". Residual departure is an operational residual category, not a measure of educational dropout.",
+    "reason": "Correct the residual-category comparison."
+  },
+  {
+    "source_line": 43,
+    "before": "I replicate the original paper’s estimate that monitoring caused children to leave Seva Mandir-run educational centers at higher rates (Duflo, Hanna and Ryan (2012) table 10 (E112523V1)). My reconstruction of their dependent variable Leaving the center shows an estimated treatment effect of 8.4 percentage points, as did the original study, matching the coefficients and standard errors in the original Table 10 at their reported precision.",
+    "after": "",
+    "reason": "Remove the duplicated aggregate replication paragraph already covered in Section 2."
+  },
+  {
+    "source_line": 44,
+    "before": "based on their performance in a baseline test",
+    "after": "by their baseline written-versus-oral test status",
+    "reason": "The extension uses the test protocol, not a score."
+  },
+  {
+    "source_line": 44,
+    "before": "tables 7 and 9 (E112523V1)",
+    "after": "Tables 7 and 9",
+    "reason": "Use journal-table references rather than the dataset identifier."
+  },
+  {
+    "source_line": 44,
+    "before": "(table 7)",
+    "after": "(Table 7)",
+    "reason": "Consistent table labeling."
+  },
+  {
+    "source_line": 44,
+    "before": "(table 9)",
+    "after": "(Table 9)",
+    "reason": "Consistent table labeling."
+  },
+  {
+    "source_line": 44,
+    "before": "table 10 on leaving the center (E112523V1)",
+    "after": "Table 10 on leaving the center",
+    "reason": "Use the original journal table as the reference."
+  },
+  {
+    "source_line": 45,
+    "before": "For this exploratory analysis, I interact treatment with being able to take the written (versus oral) pretest on my reconstruction of their leaving-the-center dependent variable. As before, I cluster by school, estimate an OLS model as in equation (1), and use the wild-cluster bootstrap suggested by Cameron, Gelbach and Miller (2008).",
+    "after": "",
+    "reason": "Remove repeated model, clustering, and bootstrap description already stated above."
+  },
+  {
+    "source_line": 46,
+    "before": "the original table’s coefficient",
+    "after": "the original Table 10 average recorded-departure coefficient",
+    "reason": "Clarify the aggregate estimand and source table."
+  },
+  {
+    "source_line": 46,
+    "before": "an interaction analysis",
+    "after": "group treatment effects from the interaction model",
+    "reason": "Columns 2–3 contain tau and tau+delta rather than two interactions."
+  },
+  {
+    "source_line": 46,
+    "before": "I leave out the two children in my sample of 2,195 who happened to be included in my replication of their reported average.",
+    "after": "I leave out the two children with conflicting baseline writing records from the 2,197-child replication sample, leaving 2,195 for the interaction analysis.",
+    "reason": "Fix the sample arithmetic."
+  },
+  {
+    "source_line": 46,
+    "before": "I do not report the original coefficient and this new coefficient together because (a) they use slightly different samples, (b) the standard errors would not be comparable because these columns 2 and 3 are interactions, and (c) they are substantively different:",
+    "after": "I report the estimates together with their sample sizes and school-clustered uncertainty. They use slightly different samples and answer different questions:",
+    "reason": "Remove the contradiction and false noncomparability claim."
+  },
+  {
+    "source_line": 46,
+    "before": "by performance on a baseline test",
+    "after": "by baseline written-test status",
+    "reason": "Use the measured subgroup variable."
+  },
+  {
+    "source_line": 46,
+    "before": "Figure 1 graphs the results of columns 2–3.",
+    "after": "Figure 1 graphs the results of columns 2–3 and their direct difference.",
+    "reason": "Explain the included coefficient plot."
+  },
+  {
+    "source_line": 47,
+    "before": "children who could write (“Writer” column)",
+    "after": "baseline writers (“Writer” column)",
+    "reason": "Use child test-status labels."
+  },
+  {
+    "source_line": 47,
+    "before": "children who could not (“nonwriter” column)",
+    "after": "baseline nonwriters (“Nonwriter” column)",
+    "reason": "Use child test-status labels."
+  },
+  {
+    "source_line": 47,
+    "before": "children who could not write as unaffected",
+    "after": "baseline nonwriters as unaffected",
+    "reason": "Use child test-status labels."
+  },
+  {
+    "source_line": 47,
+    "before": "children who could write had a 21.1",
+    "after": "baseline writers had a 21.1",
+    "reason": "Use child test-status labels."
+  },
+  {
+    "source_line": 47,
+    "before": "point larger effect",
+    "after": "percentage-point larger effect",
+    "reason": "State interaction units."
+  },
+  {
+    "source_line": 47,
+    "before": "children who could not.",
+    "after": "baseline nonwriters.",
+    "reason": "Use child test-status labels."
+  },
+  {
+    "source_line": 47,
+    "before": ", as in the original paper",
+    "after": "",
+    "reason": "Do not attribute the added bootstrap to the original article."
+  },
+  {
+    "source_line": 48,
+    "before": "This analysis says nothing about why or where these children went when they left:",
+    "after": "The total-departure interaction does not establish why or where these children went when they left:",
+    "reason": "The recorded marker supplies some destination information, so avoid saying none exists."
+  },
+  {
+    "source_line": 48,
+    "before": "Treatment_i and Writer_i",
+    "after": "school treatment and child baseline writing status",
+    "reason": "Use accurate variable levels."
+  },
+  {
+    "source_line": 48,
+    "before": "in table 3",
+    "after": "in Table 3",
+    "reason": "Consistent table labeling."
+  },
+  {
+    "source_line": 48,
+    "before": "The interaction with baseline ability is much larger on Departure: residual than on Government school",
+    "after": "The interaction with baseline writing status has a larger point estimate on Residual departure than on Government school",
+    "reason": "Avoid an untested contrast claim and an ability measure claim."
+  },
+  {
+    "source_line": 49,
+    "before": "Results do not contradict those reported in the original study’s table 7, which found that more hours of instruction due to more days that the school was open (Duflo, Hanna and Ryan (2012) table 7 (E112523V1)), because this table limits its analysis to children who stayed at the center and reports",
+    "after": "Results do not contradict those reported in the original study’s Table 7, which found more hours of instruction because schools were open more often. Panel C limits its analysis to children who stayed at the center and reports",
+    "reason": "Repair sentence grammar and distinguish selected-stayer Panel C from the full table."
+  },
+  {
+    "source_line": 49,
+    "before": "the original table 9 finds that children who could take the written pretest had significantly higher gains in learning",
+    "after": "the original Table 9 reports larger estimated learning gains among children who took the written pretest",
+    "reason": "The original article does not test equality of these subgroup learning effects."
+  },
+  {
+    "source_line": 49,
+    "before": "more hours of instruction",
+    "after": "more days of instruction",
+    "reason": "Original Table 7 reports instruction days rather than hours."
+  },
+  {
+    "source_line": 49,
+    "before": "My results in table 2 extend the original study’s table 10",
+    "after": "My results in Table 2 extend the original study’s Table 10",
+    "reason": "Consistent new-versus-original table references."
+  },
+  {
+    "source_line": 49,
+    "before": "tables 7 and 9.",
+    "after": "Tables 7 and 9.",
+    "reason": "Consistent table labeling."
+  },
+  {
+    "source_line": 51,
+    "before": "Table 3 shows results for departure from baseline school and departure to government school",
+    "after": "Table 3 shows interaction results for total recorded departure, the government-school marker, and residual departure",
+    "reason": "Identify all three interaction outcomes."
+  },
+  {
+    "source_line": 51,
+    "before": "Under these definitions, the first two sum to departure as coded originally.",
+    "after": "Under these definitions, the government-marker and residual interaction point estimates sum to the total-departure interaction.",
+    "reason": "State the correct decomposition."
+  },
+  {
+    "source_line": 51,
+    "before": "writers were more likely to move into government schools",
+    "after": "the treatment effect on the recorded government-school marker was larger for writers than nonwriters",
+    "reason": "The delta test compares two treatment effects."
+  },
+  {
+    "source_line": 51,
+    "before": "Departure without a government school flag includes all other departures, including missing.",
+    "after": "Departure without a government-school flag includes all other recorded departures, including those with missing destination reasons.",
+    "reason": "Avoid implying missing reasons or attendance automatically create departure."
+  },
+  {
+    "source_line": 51,
+    "before": "such a pattern is not able to explain the difference between the groups",
+    "after": "the imprecise marker interaction and missing destination records do not establish whether transfers explain the difference between the groups",
+    "reason": "Do not rule out transfers from a nonsignificant interaction."
+  },
+  {
+    "source_line": 52,
+    "before": "some have a coded reason for departure that does not appear in the available codebooks",
+    "after": "some departure classifications involve undocumented attendance codes",
+    "reason": "Correct the type of ambiguous code."
+  },
+  {
+    "source_line": 52,
+    "before": "113 with unknown codes",
+    "after": "113 whose departure classifications involve undocumented attendance codes",
+    "reason": "Keep the 113-case denominator but correct its meaning."
+  },
+  {
+    "source_line": 52,
+    "before": "region of baseline school",
+    "after": "existing school-block/geographic indicators",
+    "reason": "Do not claim verified randomization strata."
+  },
+  {
+    "source_line": 52,
+    "before": "(to minimize the observations with fewer than five checks)",
+    "after": "(to check dependence on the final January–February 2006 records, whose appended reason values become blank under the distributed Stata convention)",
+    "reason": "Correct the fixed endpoint rationale."
+  },
+  {
+    "source_line": 52,
+    "before": "children with departure coded in a way not in the codebooks",
+    "after": "the 113 children with ambiguous attendance-based departure classifications",
+    "reason": "Correct the exclusion sensitivity."
+  },
+  {
+    "source_line": 52,
+    "before": "bounding relies on other observations in the sample",
+    "after": "the algebraic ranges hold the other observations fixed and are not confidence intervals",
+    "reason": "Separate measurement ranges from sampling uncertainty."
+  },
+  {
+    "source_line": 53,
+    "before": "children in control (treatment) who went to schools run by nonwriters",
+    "after": "baseline nonwriter children in control (treatment)",
+    "reason": "Writer/nonwriter is a child characteristic."
+  },
+  {
+    "source_line": 53,
+    "before": "children who went to schools run by writers",
+    "after": "baseline writer children",
+    "reason": "Writer/nonwriter is a child characteristic."
+  },
+  {
+    "source_line": 53,
+    "before": "whether its principal was a writer",
+    "after": "the child’s baseline writing status",
+    "reason": "Writer/nonwriter is not a principal characteristic."
+  },
+  {
+    "source_line": 53,
+    "before": "common treatment-proof measure of exiting education",
+    "after": "treatment-independent measure of permanent educational exit",
+    "reason": "Clarify the observation-process limitation."
+  },
+  {
+    "source_line": 53,
+    "before": "A child not present in all five checks",
+    "after": "A child absent at all selected checks",
+    "reason": "Specify zero attendance, including incomplete histories, rather than merely less-than-perfect attendance."
+  },
+  {
+    "source_line": 53,
+    "before": "across the sample chosen, the reason for departure is missing for 66.4% of observations",
+    "after": "reason fields are blank in 7,112 of 10,707 selected open-school check records (66.4%)",
+    "reason": "Identify the check-level denominator, not a child-level proportion."
+  },
+  {
+    "source_line": 53,
+    "before": "children who went to schools run by writers than nonwriters",
+    "after": "baseline writers than baseline nonwriters",
+    "reason": "Correct the final child-level conclusion."
+  },
+  {
+    "source_line": 5,
+    "before": "Duflo, Hanna and Ryan (2012) study whether camera monitoring and attendance-linked pay reduce teacher absenteeism and improve learning. They find about a 21-percentage-point reduction in teacher absence and a 0.17-standard-deviation gain in test scores. They run a field experiment with educational centers run by Seva Mandir in rural Udaipur, Rajasthan (Duflo, Hanna and Ryan, 2012). In these centers, which I will refer to as schools following the practice in Duflo, Hanna and Ryan (2012), children learn basic Hindi and other things to prepare them for enrolling in government schools. Schools typically have a single teacher, so are closed when the teacher is not present. Duflo, Hanna and Ryan (2012) randomize schools to a package of camera monitoring and attendance-linked pay; the treatment began in September 2003. I focus on results through February 2006, which was used to produce the two tables that I replicate; however, as of October 2009 the program was still active.¹",
+    "after": "Duflo, Hanna, and Ryan (2012) study whether camera monitoring and attendance-linked pay reduce teacher absenteeism and improve learning. They find about a 21-percentage-point reduction in teacher absence and a 0.17-standard-deviation gain in test scores. They run a field experiment with educational centers run by Seva Mandir in rural Udaipur, Rajasthan (Duflo, Hanna, and Ryan, 2012). In these centers, which I will refer to as schools following the practice in Duflo, Hanna, and Ryan (2012), children learn basic Hindi and other things to prepare them for enrolling in government schools. Schools typically have a single teacher, so are closed when the teacher is not present. Duflo, Hanna, and Ryan (2012) randomize schools to a package of camera monitoring and attendance-linked pay; the treatment began in September 2003. I focus on results through February 2006, which was used to produce the two tables that I replicate; however, as of October 2009 the program was still active.¹",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 5,
+    "before": "(Duflo, Hanna, and Ryan, 2012)",
+    "after": "(Duflo, Hanna, and Ryan 2012)",
+    "reason": "Consistent Chicago author-date citation."
+  },
+  {
+    "source_line": 6,
+    "before": "Duflo, Hanna and Ryan (2012) randomize 120 schools, seven of which were excluded from the analysis following randomization but before the intervention was announced to schools, leaving 57 treatment and 56 control schools. In treatment schools, teachers and children were photographed at the beginning and end of each school day; researchers measured attendance through surprise visits in both treatment and control schools. Treatment schools' teachers were compensated based in part on attendance as indicated in the photos; control schools' teachers continued to receive a fixed wage.",
+    "after": "Duflo, Hanna, and Ryan (2012) randomize 120 schools, seven of which were excluded from the analysis following randomization but before the intervention was announced to schools, leaving 57 treatment and 56 control schools. In treatment schools, teachers and children were photographed at the beginning and end of each school day; researchers measured attendance through surprise visits in both treatment and control schools. Treatment schools' teachers were compensated based in part on attendance as indicated in the photos; control schools' teachers continued to receive a fixed wage.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 7,
+    "before": "Using data shared by Duflo, Hanna and Ryan (2019) in a replication package (E112523V1), which consists of Stata files, I replicate the pooled all-teacher result in the paper’s original Table 2, Panel A, and all three departure rows in its Table 10,² and recreate these results and an extension (described below) in Python. Software and reproduction details appear in Appendix D. After completing this replication, I add the extension described below.",
+    "after": "Using data shared by Duflo, Hanna, and Ryan (2019) in a replication package (E112523V1), which consists of Stata files, I replicate the pooled all-teacher result in the paper’s original Table 2, Panel A, and all three departure rows in its Table 10,² and recreate these results and an extension (described below) in Python. Software and reproduction details appear in Appendix D. After completing this replication, I add the extension described below.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 8,
+    "before": "In the original Table 2, Panel A, the sample consists of 3,071 random visits to 113 schools. Duflo, Hanna and Ryan (2012) estimate a regression of whether the school was open on a constant and treatment status and report standard errors clustered by school. To construct the data, I exclude a baseline period before treatment was announced, continue to exclude the same schools as Duflo, Hanna and Ryan (2012), and categorize the data collected in late August as belonging to the intervention period of September 2003–February 2006.",
+    "after": "In the original Table 2, Panel A, the sample consists of 3,071 random visits to 113 schools. Duflo, Hanna, and Ryan (2012) estimate a regression of whether the school was open on a constant and treatment status and report standard errors clustered by school. To construct the data, I exclude a baseline period before treatment was announced, continue to exclude the same schools as Duflo, Hanna, and Ryan (2012), and categorize the data collected in late August as belonging to the intervention period of September 2003–February 2006.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 9,
+    "before": "I match the pooled result in the original Table 2, Panel A, of Duflo, Hanna and Ryan (2012). In my reconstruction, schools were open in 78.7% of visits in treatment schools and 58.0% of visits in control schools. The estimated treatment effect, with SEs clustered at the school level in parentheses, is 0.207 (0.030). Rounding to match precision in the published table, I match these published values. Expressed in percentage points, the 95% confidence interval is [14.9, 26.6]. Table 1 reports both the attendance and departure replications.",
+    "after": "I match the pooled result in the original Table 2, Panel A, of Duflo, Hanna, and Ryan (2012). In my reconstruction, schools were open in 78.7% of visits in treatment schools and 58.0% of visits in control schools. The estimated treatment effect, with SEs clustered at the school level in parentheses, is 0.207 (0.030). Rounding to match precision in the published table, I match these published values. Expressed in percentage points, the 95% confidence interval is [14.9, 26.6]. Table 1 reports both the attendance and departure replications.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 10,
+    "before": "In Table 10 of Duflo, Hanna and Ryan (2012), the sample consists of 2,197 children in 111 schools. I match the results in Table 10, which includes regressions of departure indicators on a constant and treatment status and reports standard errors clustered by school. I use the algorithm in Duflo, Hanna and Ryan (2012): for a given child, first select the latest up to five times they were checked when the school was open, from last to first. Next, recode whether or not they attended in those selected instances, and sum up these recodes. If the result is 0, then this child is classified as having departed under this rule. A child for which this is not true did not necessarily continue; this method of aggregation does not tell us that. The dependent variables are (1) recorded departure, (2) a government-school marker among recorded departures, and (3) residual departure, equal to recorded departure minus the marker.",
+    "after": "In Table 10 of Duflo, Hanna, and Ryan (2012), the sample consists of 2,197 children in 111 schools. I match the results in Table 10, which includes regressions of departure indicators on a constant and treatment status and reports standard errors clustered by school. I use the algorithm in Duflo, Hanna, and Ryan (2012): for a given child, first select the latest up to five times they were checked when the school was open, from last to first. Next, recode whether or not they attended in those selected instances, and sum up these recodes. If the result is 0, then this child is classified as having departed under this rule. A child for which this is not true did not necessarily continue; this method of aggregation does not tell us that. The dependent variables are (1) recorded departure, (2) a government-school marker among recorded departures, and (3) residual departure, equal to recorded departure minus the marker.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 11,
+    "before": "I recreate this data on departure from the two raw data files. I merge these roster files on to school random checks using school id and visit date, and on to child enrollment and baseline writing records using school id × child id. To determine departure, I follow the procedure above. Some attendance codes lack documented meanings, and the reason fields differ in type. I follow the attendance recodes in Duflo, Hanna and Ryan (2012) as well as their procedure for appending reason variables. In many instances the reason is blank; a blank does not itself classify a child as departed or supply a government-school marker. The marker equals one for a child classified as departed with reason “2” in at least one selected record. I divide departure up into an indicator for the recorded government-school marker and an indicator for residual departure; these two outcomes sum to departure in my calculations. I chose the names of these categories carefully; the first is only a marker for whether the selected records contain a government-school reason marker, and not having this marker does not necessarily indicate leaving education. Appendix B describes this data more fully and discusses some inconsistencies between the numeric version of reasons children leave and a text version of these reasons.",
+    "after": "I recreate this data on departure from the two raw data files. I merge these roster files on to school random checks using school id and visit date, and on to child enrollment and baseline writing records using school id × child id. To determine departure, I follow the procedure above. Some attendance codes lack documented meanings, and the reason fields differ in type. I follow the attendance recodes in Duflo, Hanna, and Ryan (2012) as well as their procedure for appending reason variables. In many instances the reason is blank; a blank does not itself classify a child as departed or supply a government-school marker. The marker equals one for a child classified as departed with reason “2” in at least one selected record. I divide departure up into an indicator for the recorded government-school marker and an indicator for residual departure; these two outcomes sum to departure in my calculations. I chose the names of these categories carefully; the first is only a marker for whether the selected records contain a government-school reason marker, and not having this marker does not necessarily indicate leaving education. Appendix B describes this data more fully and discusses some inconsistencies between the numeric version of reasons children leave and a text version of these reasons.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 14,
+    "before": "The estimates below use the main sample described in Duflo, Hanna and Ryan (2012). To facilitate matching to the study replication files, I drop two children with multiple baseline observations whose records disagree about the child’s test status, resulting in 2,195 children from 111 schools. The sample includes 1,136 children from 57 treated schools and 1,059 children from 54 control schools. Without adding data or measures or imposing passing score cutoffs on test scores, there are 1,798 “nonwriters” and 397 “writers.”",
+    "after": "The estimates below use the main sample described in Duflo, Hanna, and Ryan (2012). To facilitate matching to the study replication files, I drop two children with multiple baseline observations whose records disagree about the child’s test status, resulting in 2,195 children from 111 schools. The sample includes 1,136 children from 57 treated schools and 1,059 children from 54 control schools. Without adding data or measures or imposing passing score cutoffs on test scores, there are 1,798 “nonwriters” and 397 “writers.”",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 16,
+    "before": "A motivation for studying departures is that the Seva Mandir-operated centers can be stepping-stones towards enrollment into government schools by teaching children foundational skills. One reason treatment may have had heterogeneous effects on departures may be that it caused children who were better prepared to enter government schools (with written baseline-test status used as a coarse preparation proxy) to be more likely to leave the centers. Of course, any heterogeneity in departures could be due to a variety of other reasons, including other differences between writers and nonwriters or differential impacts of monitoring on measurement of writer versus nonwriter attendance. Duflo, Hanna and Ryan (2012) use this same distinction to analyze heterogeneous impacts of treatment on learning outcomes and attendance. This exercise examines whether the treatment effect on recorded departure differs between writers and nonwriters, with or without a government-school marker. Thus, these results should be viewed as exploratory, and do not estimate a treatment effect of ability or of writing.",
+    "after": "A motivation for studying departures is that the Seva Mandir-operated centers can be stepping-stones towards enrollment into government schools by teaching children foundational skills. One reason treatment may have had heterogeneous effects on departures may be that it caused children who were better prepared to enter government schools (with written baseline-test status used as a coarse preparation proxy) to be more likely to leave the centers. Of course, any heterogeneity in departures could be due to a variety of other reasons, including other differences between writers and nonwriters or differential impacts of monitoring on measurement of writer versus nonwriter attendance. Duflo, Hanna, and Ryan (2012) use this same distinction to analyze heterogeneous impacts of treatment on learning outcomes and attendance. This exercise examines whether the treatment effect on recorded departure differs between writers and nonwriters, with or without a government-school marker. Thus, these results should be viewed as exploratory, and do not estimate a treatment effect of ability or of writing.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 20,
+    "before": "I estimate the model for three different outcomes in Y. Departed is the departure measure used by Duflo, Hanna and Ryan (2012). Government School is an indicator equal to one if the child is classified as departed and has a government-school reason marker in at least one selected record. Residual Departure is Departed minus Government School. I conduct wild cluster bootstrap hypothesis tests that impose the null under test, use 9,999 school-level Rademacher wild-bootstrap-t draws (using a random number seed of 20260922), and account for the finite number of clusters following Cameron, Gelbach and Miller (2008). The null sets δ = 0 while leaving the treatment and writing main effects unrestricted. Table 3 reports p-values for δ, the writer-minus-nonwriter difference in treatment effects. I adjust the conventional school-clustered p-values across the three outcomes using Holm (1979), and report wild-bootstrap p-values separately. These results are exploratory as this correction does not account for the search discussed in Appendix C that considered a number of potential candidate exercises before turning to this analysis of heterogeneity.",
+    "after": "I estimate the model for three different outcomes in Y. Departed is the departure measure used by Duflo, Hanna, and Ryan (2012). Government School is an indicator equal to one if the child is classified as departed and has a government-school reason marker in at least one selected record. Residual Departure is Departed minus Government School. I conduct wild cluster bootstrap hypothesis tests that impose the null under test, use 9,999 school-level Rademacher wild-bootstrap-t draws (using a random number seed of 20260922), and account for the finite number of clusters following Cameron, Gelbach and Miller (2008). The null sets δ = 0 while leaving the treatment and writing main effects unrestricted. Table 3 reports p-values for δ, the writer-minus-nonwriter difference in treatment effects. I adjust the conventional school-clustered p-values across the three outcomes using Holm (1979), and report wild-bootstrap p-values separately. These results are exploratory as this correction does not account for the search discussed in Appendix C that considered a number of potential candidate exercises before turning to this analysis of heterogeneity.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 20,
+    "before": "Cameron, Gelbach and Miller",
+    "after": "Cameron, Gelbach, and Miller",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 44,
+    "before": "Next I explore whether children’s departure from these centers may have varied by their baseline written-versus-oral test status. In the original study’s Tables 7 and 9, Duflo, Hanna and Ryan (2012) explore heterogeneity based on whether children could take a written or only an oral pretest in tables of treatment effects on presence at the center (Table 7) and treatment effects on test scores (Table 9), respectively. They do not do this heterogeneity analysis in Table 10 on leaving the center.",
+    "after": "Next I explore whether children’s departure from these centers may have varied by their baseline written-versus-oral test status. In the original study’s Tables 7 and 9, Duflo, Hanna, and Ryan (2012) explore heterogeneity based on whether children could take a written or only an oral pretest in tables of treatment effects on presence at the center (Table 7) and treatment effects on test scores (Table 9), respectively. They do not do this heterogeneity analysis in Table 10 on leaving the center.",
+    "reason": "Consistent author-name punctuation."
+  },
+  {
+    "source_line": 47,
+    "before": "Cameron, Gelbach and Miller",
+    "after": "Cameron, Gelbach, and Miller",
+    "reason": "Consistent author-name punctuation."
+  }
+]

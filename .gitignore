@@ -1,0 +1,14 @@
+# Local environments and caches
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+node_modules/
+.ipynb_checkpoints/
+# Browser, hosting, and generated page-render artifacts
+.playwright-mcp/
+.openai/
+*.log

@@ -1,0 +1,66 @@
+{
+  "changes": [
+    {
+      "before": "Duflo, Hanna, and Ryan (2012) study single-teacher nonformal education centers operated by Seva Mandir in rural Udaipur, Rajasthan. The centers teach basic Hindi and mathematics and can prepare children to enter government schools. A teacher's absence normally closes the center. The experiment initially assigned 120 schools equally to treatment and control. Seven closed after randomization but before the program was announced, leaving 57 treatment and 56 control schools.",
+      "after": "Duflo, Hanna, and Ryan (2012) ask whether daily attendance monitoring and attendance-linked pay reduce teacher absence and improve children's learning. They study single-teacher nonformal education centers operated by Seva Mandir in rural Udaipur, Rajasthan. The centers teach basic Hindi and mathematics and can prepare children to enter government schools. A teacher's absence normally closes the center. The experiment initially assigned 120 schools equally to treatment and control. Seven closed after randomization but before the program was announced, leaving 57 treatment and 56 control schools."
+    },
+    {
+      "before": "The authors report a reduction in teacher absence of about 21 percentage points and a learning gain of about 0.17 standard deviations. They also report greater movement into government schools. The replication focuses on the reduced-form attendance result and the Table 10 departure outcomes needed for the extension. I leave the structural labor-supply model outside this focused replication.",
+      "after": [
+        "Using unannounced visits, child attendance and destination records, and tests, the authors find that the program reduced teacher absence by about 21 percentage points and increased children's test scores by about 0.17 standard deviations. They also report about a 10-percentage-point increase in government-school entry. Their dynamic labor-supply model uses daily camera records, finds that teachers respond to financial incentives, and evaluates alternative pay schedules (Duflo, Hanna, and Ryan 2012, 1241\u20131244).",
+        "I replicate the main experimental attendance result (Table 2) from random school visits and the average departure outcomes (Table 10) from child attendance and recorded destinations. I extend the departure analysis by linking those outcomes to baseline written-test status and testing whether the treatment effect differs between writers and nonwriters. Selected Table 9 learning specifications provide an additional audit. This replication does not reestimate the structural model."
+      ]
+    }
+  ],
+  "original_source_pages": [
+    1,
+    4
+  ],
+  "preserved_timeline_clarification": true,
+  "camera_clarification": {
+    "before": "In treatment schools, children photographed teachers and pupils at each school day's start and end. Camera records supported nonlinear attendance pay; control teachers received fixed salaries.",
+    "after": "Only treatment schools used program cameras; a child photographed the teacher and pupils at each day's start and end. Camera records determined pay under a nonlinear attendance schedule, which could raise or lower the teacher's salary. Control teachers received fixed salaries. Unannounced research visits measured attendance in both groups.",
+    "original_pdf_page": 6
+  },
+  "layout_changes": [
+    "Keep each table or figure note together",
+    "Keep Table 2 with its note"
+  ],
+  "pages": 18,
+  "main_pages": 12,
+  "reference_pages": 2,
+  "appendix_pages": 4,
+  "tables_unchanged": true,
+  "only_document_xml_changed": true,
+  "native_equation_and_figure_preserved": true,
+  "source_synchronized": true,
+  "docx_sha256": "6c95d6f42c05b4df1fb778c8fc7f71a2b7d818ac6816ac168b89d3268ba7238b",
+  "pdf_sha256": "663e9f17f3c6d483fb0a7422524a6e009e9aec2f96aafba622facbb496861e39",
+  "page_image_hashes": {
+    "page-15.png": "3bd28e35565f47c696818010e4cd8c1cb2f48f7664696e2158812762f207e5c6",
+    "page-14.png": "696fd530edeaf1ede3f19667fa402a8516fde9cf7988e6aff735f2990207fcef",
+    "page-16.png": "b15d1486554301620a5d2de4164144266e71a702db1d22beb1ee14e0deb32f44",
+    "page-17.png": "7f422f66c3b76b4a6a4dc673755467babe3e6b4a892a82eed150cbf329f785b9",
+    "page-13.png": "6ed93c7407016093bf028ba6ea738a484d87858ca7246730ed7c788c7ec3afbb",
+    "page-12.png": "f4a5ed23c31deb2342db5242672f96a9909f739e09569499e3148dad379a83fe",
+    "page-10.png": "160b2f979e3042e902c3990730e537db0f87e8999e586fbebba54447727cd89f",
+    "page-11.png": "e73eba6f84fde0d8ce60bb362dde988f5f589fc0c2591d41f49f089ea524d4a8",
+    "page-1.png": "215cc9814821256a615a53648a0e9bf09762b6ceca79b5ce353da19490ec931f",
+    "page-3.png": "519db27ff476d1854bbc7b944975f8af69b99d3921c32e72fcaaab2852840a36",
+    "page-2.png": "4a6171ccfb4ffe033ad9ec323b9a52006caa55c4d23363b3f2b3aaf701f5257d",
+    "page-6.png": "a5402bd2735863a909c06d73fa65564919cbb99e4611c3165a9999f72dc9bab1",
+    "page-7.png": "af0b427b131fe029f5bf66d9e731c0f0b551c7601923c6612929118b5e3ad5dc",
+    "page-5.png": "00c6b46fd7a422f6bb1991b84b76b686b315700f0589ca0f04c0ce77db43890d",
+    "page-4.png": "cdab18672049ca8f4219872aa51ea4df99665deb79d922f90cd3afa88a5b367d",
+    "page-9.png": "3b3bd512072c703cdc92a34b47af82fbeaa410fae33474de89d493db4eef183e",
+    "page-8.png": "9f9a6ba07571855763ee3cad64059a0529a7c53e73ea6c6584b91c11fda95f4c",
+    "page-18.png": "49206446beaf9f9ec9ba9f3f707affadac69e2693c705c1e56f0cd72c4da3b59"
+  },
+  "visual_qa": {
+    "1,2,6,7,8": "requirements_review",
+    "3,4,5": "root",
+    "9-12": "evidence_review",
+    "13-18": "repro_verifier",
+    "all_pages": "clean at original resolution"
+  }
+}

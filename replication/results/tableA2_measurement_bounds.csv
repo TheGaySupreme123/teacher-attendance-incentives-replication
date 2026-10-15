@@ -1,0 +1,4 @@
+sensitivity,lower_bound,upper_bound,lower_bound_percentage_points,upper_bound_percentage_points,flagged_or_incomplete_children,inference,source
+Attendance-code flags,0.1630528736,0.3412513117,16.30528736,34.12513117,113,algebraic range; no standard error or p-value,outputs/scope_search_2026_09_22/measurement/sentinel_interaction_bounds.json
+Fewer-than-five open checks,0.1191358068,0.363763694,11.91358068,36.3763694,145,algebraic range; no standard error or p-value,outputs/scope_search_2026_09_22/transition/transition_incomplete_last5_bounds.csv
+Union of flags,0.08846079898,0.4563037093,8.846079898,45.63037093,230,algebraic range; no standard error or p-value,outputs/scope_search_2026_09_22/measurement/sentinel_interaction_bounds.json

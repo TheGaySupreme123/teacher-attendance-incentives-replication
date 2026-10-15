@@ -1,0 +1,718 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-15T20:44:36.547605+00:00",
+  "command": "python3 run_all.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1/seminar_paper_drafts/submission_2026_10_15/working/TeacherAttendanceIncentivesReplicationPackage",
+  "scope": "Narrow read-only verification of headline attendance, raw Table 10 reconstruction, consensus-W interaction, saved CSV provenance, and saved 9,999-draw wild-bootstrap p-values.",
+  "software": {
+    "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "numpy": "1.26.4",
+    "pandas": "2.3.0",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.3",
+    "MPLCONFIGDIR": "/private/tmp/teacher-attendance-replication-mpl"
+  },
+  "summary": {
+    "status": "pass",
+    "checks_total": 12,
+    "checks_passed": 12,
+    "checks_failed": 0
+  },
+  "headline_attendance": {
+    "estimate": 0.20712121212121326,
+    "se_clustered": 0.029586038178045147,
+    "t_stat": 7.000640331590977,
+    "p_value": 1.9903992238938564e-10,
+    "ci_low": 0.14850026996262009,
+    "ci_high": 0.2657421542798064,
+    "control_mean": 0.5795454382896423,
+    "treatment_mean": 0.7866666913032532,
+    "n": 3071,
+    "schools": 113,
+    "cluster_df": 112,
+    "raw_rows_before_filters": 3183,
+    "rows_after_closed_school_and_first_period_filters": 3071,
+    "closed_school_ids": [
+      1111,
+      1211,
+      2493,
+      5221,
+      5231,
+      5332,
+      5711
+    ]
+  },
+  "table10_and_consensus": {
+    "table10": {
+      "raw_child_rows": 2197,
+      "shipped_child_rows": 2197,
+      "raw_schools": 111,
+      "shipped_schools": 111,
+      "raw_control_children": 1061,
+      "raw_treatment_children": 1136,
+      "shipped_control_children": 1061,
+      "shipped_treatment_children": 1136,
+      "exact_child_key_match": true,
+      "drop_value_mismatches": 0,
+      "gov_value_mismatches": 0,
+      "drop2_value_mismatches": 0,
+      "raw_drop2_definition_matches": true
+    },
+    "consensus": {
+      "pre_writ_rows": 2336,
+      "pre_writ_unique_child_ids": 2333,
+      "pre_writ_conflicting_ids": 3,
+      "in_sample_conflicting_ids": 2,
+      "consensus_children": 2195,
+      "consensus_schools": 111,
+      "W_0_children": 1798,
+      "W_1_children": 397,
+      "control_children": 1059,
+      "treatment_children": 1136,
+      "group_counts": {
+        "treat_0_W_0": 858,
+        "treat_0_W_1": 201,
+        "treat_1_W_0": 940,
+        "treat_1_W_1": 196
+      }
+    }
+  },
+  "main_interaction": {
+    "raw": {
+      "estimate": 0.21099302865623218,
+      "se_clustered": 0.07178674538721323,
+      "t_stat": 2.9391641523535985,
+      "p_value": 0.004011126002256849,
+      "ci_low": 0.0687285489338691,
+      "ci_high": 0.35325750837859526,
+      "n": 2195,
+      "schools": 111,
+      "cluster_df": 110
+    },
+    "saved": {
+      "estimate": 0.2109930286562321,
+      "se_clustered": 0.0717867453872132,
+      "t_stat": 2.9391641523535985,
+      "p_value": 0.0040111260022568,
+      "ci_low": 0.0687285489338691,
+      "ci_high": 0.3532575083785952,
+      "n": 2195,
+      "schools": 111,
+      "cluster_df": 110
+    },
+    "cell_rates": {
+      "0": {
+        "n_control": 858,
+        "n_treated": 940,
+        "control_mean": 0.337995337995338,
+        "treated_mean": 0.3882978723404255
+      },
+      "1": {
+        "n_control": 201,
+        "n_treated": 196,
+        "control_mean": 0.4427860696517413,
+        "treated_mean": 0.7040816326530612
+      }
+    }
+  },
+  "saved_wild_bootstrap": {
+    "drop": {
+      "summary_path": "outputs/scope_search_2026_09_22/transition/drop_wildbootstrap_summary.json",
+      "t_statistics_path": "outputs/scope_search_2026_09_22/transition/drop_wildbootstrap_t_statistics.csv",
+      "observed_t": 2.9391641523535985,
+      "bootstrap_repetitions": 9999,
+      "extreme_count": 71,
+      "p_value_from_saved_t_statistics": 0.0072,
+      "saved_p_value": 0.0072,
+      "seed": 20260922,
+      "validation_pass": true
+    },
+    "drop2": {
+      "summary_path": "outputs/scope_search_2026_09_22/transition/drop2_wildbootstrap_summary.json",
+      "t_statistics_path": "outputs/scope_search_2026_09_22/transition/drop2_wildbootstrap_t_statistics.csv",
+      "observed_t": 2.758234875304173,
+      "bootstrap_repetitions": 9999,
+      "extreme_count": 98,
+      "p_value_from_saved_t_statistics": 0.0099,
+      "saved_p_value": 0.0099,
+      "seed": 20260922,
+      "validation_pass": true
+    }
+  },
+  "checks": [
+    {
+      "id": "headline.attendance.raw_vs_saved_recheck",
+      "status": "pass",
+      "details": "Raw random-check reconstruction agrees with the saved attendance recheck.",
+      "observed": {
+        "estimate": 0.20712121212121326,
+        "se_clustered": 0.029586038178045147,
+        "t_stat": 7.000640331590977,
+        "p_value": 1.9903992238938564e-10,
+        "ci_low": 0.14850026996262009,
+        "ci_high": 0.2657421542798064,
+        "control_mean": 0.5795454382896423,
+        "treatment_mean": 0.7866666913032532,
+        "n": 3071,
+        "schools": 113,
+        "cluster_df": 112,
+        "raw_rows_before_filters": 3183,
+        "rows_after_closed_school_and_first_period_filters": 3071,
+        "closed_school_ids": [
+          1111,
+          1211,
+          2493,
+          5221,
+          5231,
+          5332,
+          5711
+        ]
+      },
+      "expected": {
+        "estimate": 0.20712121212121204,
+        "se_clustered": 0.029586038178045133,
+        "n": 3071,
+        "schools": 113,
+        "control_mean": 0.5795454382896423,
+        "treatment_mean": 0.7866666913032532
+      }
+    },
+    {
+      "id": "headline.attendance.rounded_published_table2",
+      "status": "pass",
+      "details": "Published Table 2 first post-baseline column rounds to 0.21 with SE 0.03.",
+      "observed": {
+        "coefficient_cell": "0.21",
+        "se_cell": "[0.03]***"
+      },
+      "expected": {
+        "coefficient_cell": "0.21",
+        "se_prefix": "[0.03]"
+      }
+    },
+    {
+      "id": "table10.raw_reconstruction_matches_shipped_child_outcomes",
+      "status": "pass",
+      "details": "Raw Table 10 construction matches shipped child-level drop and government-marker outcomes and the derived drop2 outcome.",
+      "observed": {
+        "raw_child_rows": 2197,
+        "shipped_child_rows": 2197,
+        "raw_schools": 111,
+        "shipped_schools": 111,
+        "raw_control_children": 1061,
+        "raw_treatment_children": 1136,
+        "shipped_control_children": 1061,
+        "shipped_treatment_children": 1136,
+        "exact_child_key_match": true,
+        "drop_value_mismatches": 0,
+        "gov_value_mismatches": 0,
+        "drop2_value_mismatches": 0,
+        "raw_drop2_definition_matches": true
+      },
+      "expected": {
+        "raw_child_rows": 2197,
+        "shipped_child_rows": 2197,
+        "raw_schools": 111,
+        "shipped_schools": 111,
+        "raw_control_children": 1061,
+        "shipped_control_children": 1061,
+        "raw_treatment_children": 1136,
+        "shipped_treatment_children": 1136,
+        "exact_child_key_match": true,
+        "drop_value_mismatches": 0,
+        "gov_value_mismatches": 0,
+        "drop2_value_mismatches": 0,
+        "raw_drop2_definition_matches": true
+      }
+    },
+    {
+      "id": "interaction.consensus_W_sample_and_cell_counts",
+      "status": "pass",
+      "details": "Consensus baseline-writing status leaves N=2,195 children and reproduces all four treatment-by-W cells.",
+      "observed": {
+        "pre_writ_rows": 2336,
+        "pre_writ_unique_child_ids": 2333,
+        "pre_writ_conflicting_ids": 3,
+        "in_sample_conflicting_ids": 2,
+        "consensus_children": 2195,
+        "consensus_schools": 111,
+        "W_0_children": 1798,
+        "W_1_children": 397,
+        "control_children": 1059,
+        "treatment_children": 1136,
+        "group_counts": {
+          "treat_0_W_0": 858,
+          "treat_0_W_1": 201,
+          "treat_1_W_0": 940,
+          "treat_1_W_1": 196
+        }
+      },
+      "expected": {
+        "consensus_children": 2195,
+        "consensus_schools": 111,
+        "in_sample_conflicting_ids": 2,
+        "W_0_children": 1798,
+        "W_1_children": 397,
+        "group_counts": {
+          "treat_0_W_0": 858,
+          "treat_0_W_1": 201,
+          "treat_1_W_0": 940,
+          "treat_1_W_1": 196
+        }
+      }
+    },
+    {
+      "id": "interaction.main_drop_raw_vs_saved_model",
+      "status": "pass",
+      "details": "Raw interaction fit agrees with the saved primary drop model estimate, clustered SE, interval, and p-value.",
+      "observed": {
+        "estimate": 0.21099302865623218,
+        "se_clustered": 0.07178674538721323,
+        "t_stat": 2.9391641523535985,
+        "p_value": 0.004011126002256849,
+        "ci_low": 0.0687285489338691,
+        "ci_high": 0.35325750837859526,
+        "n": 2195,
+        "schools": 111,
+        "cluster_df": 110
+      },
+      "expected": {
+        "estimate": 0.2109930286562321,
+        "se_clustered": 0.0717867453872132,
+        "t_stat": 2.9391641523535985,
+        "p_value": 0.0040111260022568,
+        "ci_low": 0.0687285489338691,
+        "ci_high": 0.3532575083785952,
+        "n": 2195,
+        "schools": 111,
+        "cluster_df": 110
+      }
+    },
+    {
+      "id": "interaction.main_drop_four_cell_rates",
+      "status": "pass",
+      "details": "Saved group effects agree with the raw four-cell counts and rates used by the interaction.",
+      "observed": {
+        "mismatches": [],
+        "raw_cells": {
+          "0": {
+            "n_control": 858,
+            "n_treated": 940,
+            "control_mean": 0.337995337995338,
+            "treated_mean": 0.3882978723404255
+          },
+          "1": {
+            "n_control": 201,
+            "n_treated": 196,
+            "control_mean": 0.4427860696517413,
+            "treated_mean": 0.7040816326530612
+          }
+        }
+      },
+      "expected": {
+        "mismatches": []
+      }
+    },
+    {
+      "id": "bootstrap.drop.saved_p_value_from_9999_t_statistics",
+      "status": "pass",
+      "details": "Saved wild-bootstrap p-value equals (1 + saved |t| exceedances) / (9,999 + 1), with sequential draws and stored flags checked.",
+      "observed": {
+        "bootstrap_repetitions": 9999,
+        "t_statistics_rows": 9999,
+        "observed_t": 2.9391641523535985,
+        "extreme_count_from_t_statistics": 71,
+        "summary_extreme_count": 71,
+        "derived_p_value": 0.0072,
+        "summary_p_value": 0.0072,
+        "rows_are_sequential": true,
+        "stored_extreme_flags_match": true,
+        "saved_vectorized_validation_pass": true
+      },
+      "expected": {
+        "bootstrap_repetitions": 9999,
+        "extreme_count_from_t_statistics": 71,
+        "derived_p_value": 0.0072,
+        "rows_are_sequential": true,
+        "stored_extreme_flags_match": true,
+        "saved_vectorized_validation_pass": true
+      }
+    },
+    {
+      "id": "bootstrap.drop.saved_observed_fit_matches_raw",
+      "status": "pass",
+      "details": "Saved bootstrap summary reports the same observed interaction fit as the raw reconstruction.",
+      "observed": {
+        "estimate": 0.21099302865623218,
+        "se_clustered": 0.07178674538721323,
+        "t_stat": 2.9391641523535985
+      },
+      "expected": {
+        "estimate": 0.21099302865623218,
+        "se_clustered": 0.07178674538721323,
+        "t_stat": 2.9391641523535985
+      }
+    },
+    {
+      "id": "bootstrap.drop2.saved_p_value_from_9999_t_statistics",
+      "status": "pass",
+      "details": "Saved wild-bootstrap p-value equals (1 + saved |t| exceedances) / (9,999 + 1), with sequential draws and stored flags checked.",
+      "observed": {
+        "bootstrap_repetitions": 9999,
+        "t_statistics_rows": 9999,
+        "observed_t": 2.758234875304173,
+        "extreme_count_from_t_statistics": 98,
+        "summary_extreme_count": 98,
+        "derived_p_value": 0.0099,
+        "summary_p_value": 0.0099,
+        "rows_are_sequential": true,
+        "stored_extreme_flags_match": true,
+        "saved_vectorized_validation_pass": true
+      },
+      "expected": {
+        "bootstrap_repetitions": 9999,
+        "extreme_count_from_t_statistics": 98,
+        "derived_p_value": 0.0099,
+        "rows_are_sequential": true,
+        "stored_extreme_flags_match": true,
+        "saved_vectorized_validation_pass": true
+      }
+    },
+    {
+      "id": "bootstrap.drop2.saved_observed_fit_matches_raw",
+      "status": "pass",
+      "details": "Saved bootstrap summary reports the same observed interaction fit as the raw reconstruction.",
+      "observed": {
+        "estimate": 0.1625955234561139,
+        "se_clustered": 0.05894912174155696,
+        "t_stat": 2.758234875304173
+      },
+      "expected": {
+        "estimate": 0.1625955234561139,
+        "se_clustered": 0.05894912174155696,
+        "t_stat": 2.758234875304173
+      }
+    },
+    {
+      "id": "provenance.existing_input_hash_manifest",
+      "status": "pass",
+      "details": "All entries in the saved transition input-hash manifest match current bytes.",
+      "observed": {
+        "path": "outputs/scope_search_2026_09_22/INPUT_HASHES.json",
+        "rows": [
+          {
+            "path": "scripts/audit_transition_extension.py",
+            "recorded_sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a",
+            "observed_sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a",
+            "match": true
+          },
+          {
+            "path": "scripts/audit_transition_scope.py",
+            "recorded_sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979",
+            "observed_sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979",
+            "match": true
+          },
+          {
+            "path": "scripts/audit_sentinel_measurement.py",
+            "recorded_sha256": "c9c7e3482208205faf5d41c3ef9e3dd25c7102ee2cd5a70d53957d90353a5e1b",
+            "observed_sha256": "c9c7e3482208205faf5d41c3ef9e3dd25c7102ee2cd5a70d53957d90353a5e1b",
+            "match": true
+          },
+          {
+            "path": "scripts/audit_transition_sentinels.py",
+            "recorded_sha256": "d9b8c9aff814e7ff1a5bebfd9fbee6824225a43dd57fd40e2987f1902d0b0bdc",
+            "observed_sha256": "d9b8c9aff814e7ff1a5bebfd9fbee6824225a43dd57fd40e2987f1902d0b0bdc",
+            "match": true
+          },
+          {
+            "path": "scripts/run_scope_learning_family.py",
+            "recorded_sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6",
+            "observed_sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6",
+            "match": true
+          },
+          {
+            "path": "scripts/run_distribution_quantile_bootstrap.py",
+            "recorded_sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14",
+            "observed_sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14",
+            "match": true
+          },
+          {
+            "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rosterfin.dta",
+            "recorded_sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173",
+            "observed_sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173",
+            "match": true
+          },
+          {
+            "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/pre_writ_attend.dta",
+            "recorded_sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120",
+            "observed_sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120",
+            "match": true
+          },
+          {
+            "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/roster_rema2012.dta",
+            "recorded_sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374",
+            "observed_sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374",
+            "match": true
+          },
+          {
+            "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/enroll1.dta",
+            "recorded_sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4",
+            "observed_sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4",
+            "match": true
+          },
+          {
+            "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rc_for_roster.dta",
+            "recorded_sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170",
+            "observed_sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170",
+            "match": true
+          }
+        ],
+        "all_match": true,
+        "mismatches": []
+      },
+      "expected": {
+        "all_match": true
+      }
+    },
+    {
+      "id": "provenance.required_source_files_present",
+      "status": "pass",
+      "details": "All raw, source-program, shipped-reference, and saved CSV/summary files used by this verifier are present.",
+      "observed": {
+        "missing_files": []
+      },
+      "expected": {
+        "missing_files": []
+      }
+    }
+  ],
+  "hashes": {
+    "current_files": [
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Teacher-Attendance/randomcheck.dta",
+        "bytes": 336802,
+        "sha256": "a9420b9f22104f50c96041a9e483f6fa9a896b55234be107ddfc6ca041a57a21"
+      },
+      {
+        "role": "saved_reference",
+        "path": "results/attendance_recheck.json",
+        "bytes": 343,
+        "sha256": "7ddeb2858e2c5750028e9d7d8839bbc1124c34ebb2861efd37d9076cb4a199e3"
+      },
+      {
+        "role": "shipped_reference_csv",
+        "path": "data/Incentives_FINAL/Output/table2.csv",
+        "bytes": 714,
+        "sha256": "057b4e85c81d7c692ad5b5122e20a2fc1cc1f48d5d664e2bc2ad0ca27492546e"
+      },
+      {
+        "role": "source_program",
+        "path": "data/Incentives_FINAL/Programs/Table-2.do",
+        "bytes": 5442,
+        "sha256": "764c8ed189a8d4d5469b357136df86edf4e20125d3b940206724bba9b080c746"
+      },
+      {
+        "role": "source_program",
+        "path": "data/Incentives_FINAL/Programs/Table7_Table10.do",
+        "bytes": 9892,
+        "sha256": "929b74594f081bb46085975b9199b465d220a7bdc8915b9b1f6c18387609786e"
+      },
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/roster_rema2012.dta",
+        "bytes": 41704463,
+        "sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374"
+      },
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rosterfin.dta",
+        "bytes": 390122,
+        "sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173"
+      },
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rc_for_roster.dta",
+        "bytes": 91017,
+        "sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170"
+      },
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/enroll1.dta",
+        "bytes": 27473,
+        "sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4"
+      },
+      {
+        "role": "raw_input",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/pre_writ_attend.dta",
+        "bytes": 28745,
+        "sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120"
+      },
+      {
+        "role": "shipped_reference",
+        "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/Temp/drop.dta",
+        "bytes": 62723,
+        "sha256": "efee6f4bd66639f522bcbd824f625c66ee76635dbe1a43f9ce0b651057a54ccc"
+      },
+      {
+        "role": "shipped_reference_csv",
+        "path": "data/Incentives_FINAL/Output/Table10.csv",
+        "bytes": 238,
+        "sha256": "788e3658be98b476c037bbed071c5cbd2cff5e7ebc8f2b285da9d3578ab53852"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/research_direction_audit/transition_table10_reproduction.csv",
+        "bytes": 542,
+        "sha256": "dcab35b9cdae3d63378e4f4c16fdb9d45969230983511abe14c9267dbd211136"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/research_direction_audit/transition_interaction.csv",
+        "bytes": 2152,
+        "sha256": "b7d70278ecc89a7920b6229f4a8b230ac396aaf247607e5216101b864cb34bc1"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/research_direction_audit/transition_group_means.csv",
+        "bytes": 293,
+        "sha256": "d4acca3f7d7b70ccd9012d5ee03fbe5373f252a2d364155e501083f6c4f60ab5"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/scope_search_2026_09_22/transition/transition_scope_group_effects.csv",
+        "bytes": 1191,
+        "sha256": "33594d05eb4aa9354e388cccf004e6f4f2d503730dc484857f68d512d54b02ac"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/scope_search_2026_09_22/transition/transition_scope_model_results.csv",
+        "bytes": 2415,
+        "sha256": "cfa8514233c6bcbdcfa5efbae44fd9933c12b7aaef28593782616e05d9fece5c"
+      },
+      {
+        "role": "saved_analysis_summary",
+        "path": "outputs/scope_search_2026_09_22/transition/drop_wildbootstrap_summary.json",
+        "bytes": 627,
+        "sha256": "5e803b5780166ecc51477f04333f22664c7f16d66e2c4845782f0343dfe238c1"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/scope_search_2026_09_22/transition/drop_wildbootstrap_t_statistics.csv",
+        "bytes": 512399,
+        "sha256": "461447226672401bbfd311a2eddf70d1979f9d65eba7d4ee739d8a50cd8009a6"
+      },
+      {
+        "role": "saved_analysis_summary",
+        "path": "outputs/scope_search_2026_09_22/transition/drop2_wildbootstrap_summary.json",
+        "bytes": 626,
+        "sha256": "ac800c29a2ae118d0180d01d203cdebda1dbafd24aca819f94eb845dccfd3cc9"
+      },
+      {
+        "role": "saved_analysis_csv",
+        "path": "outputs/scope_search_2026_09_22/transition/drop2_wildbootstrap_t_statistics.csv",
+        "bytes": 513580,
+        "sha256": "25724944789b23680374b8ef384d09a5fcf8f65c89d93d0eeb0d68a724785683"
+      },
+      {
+        "role": "saved_hash_manifest",
+        "path": "outputs/scope_search_2026_09_22/INPUT_HASHES.json",
+        "bytes": 1724,
+        "sha256": "003027c87472c531975a8f85a029cd3fd19e0ab61ebe3c010762abfb3d14cce5"
+      },
+      {
+        "role": "audit_script",
+        "path": "scripts/audit_transition_extension.py",
+        "bytes": 21066,
+        "sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a"
+      },
+      {
+        "role": "audit_script",
+        "path": "scripts/audit_transition_scope.py",
+        "bytes": 33268,
+        "sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979"
+      }
+    ],
+    "missing_files": [],
+    "existing_input_manifest": {
+      "path": "outputs/scope_search_2026_09_22/INPUT_HASHES.json",
+      "rows": [
+        {
+          "path": "scripts/audit_transition_extension.py",
+          "recorded_sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a",
+          "observed_sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a",
+          "match": true
+        },
+        {
+          "path": "scripts/audit_transition_scope.py",
+          "recorded_sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979",
+          "observed_sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979",
+          "match": true
+        },
+        {
+          "path": "scripts/audit_sentinel_measurement.py",
+          "recorded_sha256": "c9c7e3482208205faf5d41c3ef9e3dd25c7102ee2cd5a70d53957d90353a5e1b",
+          "observed_sha256": "c9c7e3482208205faf5d41c3ef9e3dd25c7102ee2cd5a70d53957d90353a5e1b",
+          "match": true
+        },
+        {
+          "path": "scripts/audit_transition_sentinels.py",
+          "recorded_sha256": "d9b8c9aff814e7ff1a5bebfd9fbee6824225a43dd57fd40e2987f1902d0b0bdc",
+          "observed_sha256": "d9b8c9aff814e7ff1a5bebfd9fbee6824225a43dd57fd40e2987f1902d0b0bdc",
+          "match": true
+        },
+        {
+          "path": "scripts/run_scope_learning_family.py",
+          "recorded_sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6",
+          "observed_sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6",
+          "match": true
+        },
+        {
+          "path": "scripts/run_distribution_quantile_bootstrap.py",
+          "recorded_sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14",
+          "observed_sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14",
+          "match": true
+        },
+        {
+          "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rosterfin.dta",
+          "recorded_sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173",
+          "observed_sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173",
+          "match": true
+        },
+        {
+          "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/pre_writ_attend.dta",
+          "recorded_sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120",
+          "observed_sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120",
+          "match": true
+        },
+        {
+          "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/roster_rema2012.dta",
+          "recorded_sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374",
+          "observed_sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374",
+          "match": true
+        },
+        {
+          "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/enroll1.dta",
+          "recorded_sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4",
+          "observed_sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4",
+          "match": true
+        },
+        {
+          "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rc_for_roster.dta",
+          "recorded_sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170",
+          "observed_sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170",
+          "match": true
+        }
+      ],
+      "all_match": true,
+      "mismatches": []
+    },
+    "verifier_script_sha256": "49c3d4af74156198628f1d932b0033ce459fd8eea9f73ea3fcb9d202e954609c"
+  },
+  "limitations": [
+    "This verifier does not rerun the 9,999-draw bootstrap; it checks the saved t-statistics and p-value arithmetic.",
+    "It does not certify every original paper table, the structural model, or alternative learning extensions.",
+    "Agreement with the operational last-open-check outcome does not remove the treatment-dependent observation and destination-coding limitations described in the paper."
+  ]
+}

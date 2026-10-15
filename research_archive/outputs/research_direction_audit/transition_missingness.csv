@@ -1,0 +1,9 @@
+quantity,value
+raw_pre_writ_rows,2336
+raw_pre_writ_unique_child_ids,2333
+raw_pre_writ_duplicate_child_ids,3
+raw_pre_writ_conflicting_child_ids,3
+table10_child_outcomes,2197
+table10_child_outcomes_with_consensus_pre_writ,2195
+table10_child_outcomes_missing_or_conflicting_pre_writ,2
+conflicting_ids_in_analysis_sample,2

@@ -1,0 +1,17 @@
+{
+  "command": "python3 scripts/audit_learning_extension.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T10:15:21.846130+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "pandas": "2.3.0",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3",
+  "script_sha256": "9dcecfa77c0d3407f850f4a47d2243845d531992cd27cb91b7847daa8de3a089",
+  "git_commit": "dcca6f065c7dd0806e1fb483289cbf0bd090dab3",
+  "replication_gate_pass": true,
+  "replication_matches": 16,
+  "replication_specs": 16,
+  "primary_candidate": "post-test total score x continuous baseline teacher score",
+  "prior_exploration_note": "Candidate selected after earlier exploratory work in this repository; not preregistered."
+}

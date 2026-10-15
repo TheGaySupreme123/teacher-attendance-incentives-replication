@@ -1,0 +1,8 @@
+quantity,treat,pre_writ,n,incomplete_last_five,observed_complete_drop_sum,lower_bound,upper_bound,inference
+drop_cell_mean,0.0,0.0,858.0,81.0,259.0,0.30186480186480186,0.3962703962703963,algebraic binary-outcome bounds; no standard error
+drop_cell_mean,0.0,1.0,201.0,21.0,73.0,0.36318407960199006,0.46766169154228854,algebraic binary-outcome bounds; no standard error
+drop_cell_mean,1.0,0.0,940.0,43.0,351.0,0.37340425531914895,0.41914893617021276,algebraic binary-outcome bounds; no standard error
+drop_cell_mean,1.0,1.0,196.0,0.0,138.0,0.7040816326530612,0.7040816326530612,algebraic binary-outcome bounds; no standard error
+drop_treatment_effect,,0.0,,,,-0.022866140951247338,0.1172841343054109,algebraic binary-outcome bounds; no standard error
+drop_treatment_effect,,1.0,,,,0.2364199411107727,0.34089755305107117,algebraic binary-outcome bounds; no standard error
+drop_interaction_writer_minus_nonwriter,,,2195.0,145.0,,0.11913580680536179,0.3637636940023185,algebraic binary-outcome bounds; no standard error

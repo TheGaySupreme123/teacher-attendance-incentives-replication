@@ -1,0 +1,54 @@
+{
+  "before": "The program began in September 2003. In treatment schools, a child photographed the teacher and pupils at the beginning and end of each school day. Camera records supported a nonlinear attendance-payment schedule. Control teachers continued to receive a fixed salary. Random assignment identifies the effect of this monitoring and pay package. It does not isolate the contribution of cameras, financial incentives, or increased teacher presence as a mediator.",
+  "after": "The program began in September 2003. The attendance analysis runs through February 2006; the program still operated as of October 2009 (Duflo, Hanna, and Ryan 2012, 1249, 1251). In treatment schools, children photographed teachers and pupils at each school day's start and end. Camera records supported nonlinear attendance pay; control teachers received fixed salaries. Random assignment identifies the package's effect, without isolating cameras, financial incentives, or teacher presence as a mediator.",
+  "changed_docx_parts": [
+    "word/document.xml"
+  ],
+  "source_pages": {
+    "attendance_period": {
+      "printed": 1249,
+      "pdf": 9
+    },
+    "program_continuation": {
+      "printed": 1251,
+      "pdf": 11
+    }
+  },
+  "pages": 17,
+  "changed_paragraph_index": 14,
+  "changed_page_images_vs_original": [
+    "page-3.png"
+  ],
+  "docx_sha256": "87921d70771314e15b656de3cd651104db8306e1ca3315162255cba648af0ca5",
+  "rendered_pdf_sha256": "0577f969cef59d104b173adfc0c983847a9d9d6e27187dc4e05554f96878b0d0",
+  "page_image_hashes": {
+    "page-15.png": "4a7f587db15270ce22173b84e38d222f1fa8c4da8f7a533c91ff89b9a420675c",
+    "page-14.png": "e1baa8c8a57eee7c7772548e7889643e1fab2ec32389e9cfce152c20838ff247",
+    "page-16.png": "bd90c485d8fef644334c507e3b367c7bd25983704fe565ea60002315ab86e0c4",
+    "page-17.png": "52741ad8f6975c47e2d3731487f3543f6ea860ceec8000623fb6b2e940994775",
+    "page-13.png": "9fa0895c5747465900da9a0e98a142c1eb762d5bd40bf54ed240b3ce7ceb20f9",
+    "page-12.png": "d41c19438bbc702c09bb6e1bbdda586f7445bda57faf57c9f307c810ec69ef95",
+    "page-10.png": "618e399f6c49466fc883b288aedc85d9e96b75fb8f0c75c9ee42da020249f9c3",
+    "page-11.png": "fa54b94e9bfcf2ab7491c4a4640efeef34d28cd95ca09bb8735302f90067ea0b",
+    "page-1.png": "215cc9814821256a615a53648a0e9bf09762b6ceca79b5ce353da19490ec931f",
+    "page-3.png": "e5f16cd1d9e939ae0b46494acc9afe6e75a00a204ac055fde8ec30fe6adef567",
+    "page-2.png": "4a6171ccfb4ffe033ad9ec323b9a52006caa55c4d23363b3f2b3aaf701f5257d",
+    "page-6.png": "494757d1ece4912494db58607c14808bcaf1d8b8700debda1cbd88e77563ca06",
+    "page-7.png": "e07ea8c520349f9503c100bf4bfb825859389c891e3977e7e41804031dce31af",
+    "page-5.png": "fcc108eaf86d0d860841d75a406bdb95e8f09956a4a01b31430308f685fbf4e4",
+    "page-4.png": "6fb08203b1cfaafa504e480ae4278138f19909eeacb2cb2e9d1605913f71e992",
+    "page-9.png": "e0dde47f2794f06fa9c6062854aa1462ec773fa9e9186953cf83a7a844270df4",
+    "page-8.png": "62e0a62575558c41e5aa07bc31e36b3b85edd2369d83d067d0f62cd32832891f"
+  },
+  "all_other_paragraphs_and_tables_unchanged": true,
+  "pdf_synchronized": true,
+  "pdf_sha256": "0577f969cef59d104b173adfc0c983847a9d9d6e27187dc4e05554f96878b0d0",
+  "visual_qa": {
+    "1-2": "requirements_review; identical final pixels",
+    "3,5": "root final render",
+    "4,6-8": "requirements_review final render",
+    "9-11": "evidence_review final render",
+    "12-17": "repro_verifier; identical final pixels",
+    "all_pages": "clean; all 17 pages inspected at original resolution"
+  }
+}

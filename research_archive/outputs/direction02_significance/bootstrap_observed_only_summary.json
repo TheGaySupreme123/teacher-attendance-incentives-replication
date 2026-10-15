@@ -1,0 +1,50 @@
+{
+  "candidate": "post-test total score x continuous baseline teacher score",
+  "outcome": "outcome_z",
+  "full_model": [
+    "const",
+    "treat",
+    "score_z",
+    "treat_score_z",
+    "pre_total_v",
+    "pre_total_w",
+    "pre_writ"
+  ],
+  "restricted_model": [
+    "const",
+    "treat",
+    "score_z",
+    "pre_total_v",
+    "pre_total_w",
+    "pre_writ"
+  ],
+  "sample_rule": "R == 1 from run_direction02_attrition.prepare_data(): eligible observed-outcome rows only",
+  "null": "treat_score_z = 0; treatment main effect and all other terms remain unrestricted",
+  "inference": "null-imposed school-cluster wild bootstrap-t with Rademacher multipliers",
+  "observed_coefficient": 0.13213278149563928,
+  "observed_clustered_se": 0.07125148559990277,
+  "observed_t": 1.8544565124943808,
+  "classical_clustered_p_value": 0.06662062087250527,
+  "wild_bootstrap_p_value": 0.0698,
+  "wild_bootstrap_extreme_count": 697,
+  "bootstrap_repetitions": 9999,
+  "bootstrap_seed": 20260922,
+  "bootstrap_monte_carlo_se": 0.0025480965444817827,
+  "bootstrap_batch_size": 500,
+  "sample_observation_rows": 1625,
+  "unique_school_child_keys": 1610,
+  "sample_schools": 101,
+  "degrees_of_freedom": 100,
+  "cluster_correction": 1.0137453646477133,
+  "ci_90": {
+    "critical_value": 1.66023432606575,
+    "lower": 0.013838619319501227,
+    "upper": 0.2504269436717773
+  },
+  "ci_95": {
+    "critical_value": 1.9839715184496334,
+    "lower": -0.009228136581792001,
+    "upper": 0.27349369957307057
+  },
+  "vectorized_refit_validation_pass": true
+}

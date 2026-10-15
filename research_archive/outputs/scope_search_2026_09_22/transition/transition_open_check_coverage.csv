@@ -1,0 +1,5 @@
+audit,treat,pre_writ,child_ids,mean_all_open_checks,share_at_least_five,min_all_open_checks,max_all_open_checks
+all_open_check_coverage,0.0,0.0,858,15.404428904428904,0.9055944055944056,2,27
+all_open_check_coverage,0.0,1.0,201,15.208955223880597,0.8955223880597015,3,25
+all_open_check_coverage,1.0,0.0,940,20.42340425531915,0.9542553191489361,2,31
+all_open_check_coverage,1.0,1.0,196,21.928571428571427,1.0,11,28

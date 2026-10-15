@@ -1,0 +1,20 @@
+{
+  "command": "python3 scripts/run_direction02_wildbootstrap.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T10:36:57.060285+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "numpy": "1.26.4",
+  "pandas": "2.3.0",
+  "scipy": "1.15.3",
+  "script_sha256": "ccadfaa61719ebb8f71fcf6fef0d33c28e57842917743d4ed5f6247a321b7cf0",
+  "learning_audit_script_sha256": "9dcecfa77c0d3407f850f4a47d2243845d531992cd27cb91b7847daa8de3a089",
+  "git_commit": "dcca6f065c7dd0806e1fb483289cbf0bd090dab3",
+  "seed": 20260922,
+  "bootstrap_repetitions": 9999,
+  "batch_size": 500,
+  "sample_observation_rows": 1646,
+  "unique_school_child_keys": 1631,
+  "sample_schools": 103,
+  "vectorized_refit_validation_pass": true
+}

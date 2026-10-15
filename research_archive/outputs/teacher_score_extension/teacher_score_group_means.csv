@@ -1,0 +1,5 @@
+low_score,treat,open_rate,observations,schools,teacher_score
+high_score,control,0.63390315,702,24,43.108974
+high_score,treatment,0.77935946,843,30,42.428234
+low_score,control,0.5336856,757,30,26.846104
+low_score,treatment,0.7776,625,23,25.2312

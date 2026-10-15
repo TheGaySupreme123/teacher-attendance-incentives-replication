@@ -1,0 +1,12 @@
+Analytical job: compare recorded departure proportions, distinguish levels from treatment-effect differences, and show uncertainty/measurement limits. Existing private static Sites surface; preserve source results and detailed tables.
+
+Visual thesis: a compact interactive research explainer with direct blue data marks on the existing white/navy site. No imagery or decoration. Comparison controls remain gray/outlined; solid blue is the focal treatment/estimate, neutral gray is its complement. Explicit labels prevent color-only interpretation.
+
+Layers, all local specialist passes (no delegated agents):
+1. Rates: two matched small multiples, each with control/program bars on a shared 0–100% scale; a Pies switch shows four equal-size two-slice SVG donuts. Exact percentages and numerator/denominator always shown. Complement is 'not classified as departed', not proven retained or still in education.
+2. Added comparison: zero-based treatment-effect bars and arithmetic 26.1−5.0=21.1 percentage points. Original average8.4-point result is clearly a different full-sample replication anchor.
+3. Confidence: forest plot for two group effects and their direct interaction, common −10 to50 percentage-point axis, zero line, exact95%CI labels; p-values exploratory, not probability the hypothesis is true.
+4. Robustness: four fixed estimates with95%CIs, same axis and changed-sample note for sentinel exclusion. No bars for p-values or confidence probabilities.
+5. Data limits: disjoint overlap-aware quality counts from raw child flags; original measurement limitations stay adjacent. Ranges/bounds never plotted as confidence intervals.
+
+Engineering: one active view, under150 DOM marks; static aggregate data generated from existing CSVs, no analyses rerun or raw records uploaded. Vanilla DOM/CSS position scales and hand-authored SVG arc geometry suit the small fixed set better than adding a full chart dependency. Host element owns geometry/rendering, app owns surrounding direction. URL visual= enum plus chart=bars|pies, invalid values fall back, Back/Forward honored. Buttons44px, all labels available without hover, semantic figures/HTML and detailed original tables are fallback. Mobile360–430px stacks groups without shrinking text; desktop paired small multiples. No sensors, persistence backend, runtime network calls or motion. Check exactdata sums, coordinate scales, URLs, allcontrols, tabnavigation, mobileoverflow and representative screenshots; preserve existing learning direction.

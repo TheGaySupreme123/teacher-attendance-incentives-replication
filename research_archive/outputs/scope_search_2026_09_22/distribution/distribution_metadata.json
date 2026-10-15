@@ -1,0 +1,30 @@
+{
+  "command": "python3 scripts/run_distribution_quantile_bootstrap.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T11:01:50.152798+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "numpy": "1.26.4",
+  "pandas": "2.3.0",
+  "git_commit": "dcca6f065c7dd0806e1fb483289cbf0bd090dab3",
+  "script_sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14",
+  "attrition_script_sha256": "399e377ccb850b9796c130e7f70c71a536ec1056ca58d708d00c9d7a17569c47",
+  "scope_audit_sha256": "a5848e09cf8876b183422bb53de8b3e78a4ab617d8306dfa75639e6a1a4f91c7",
+  "seed": 20260922,
+  "bootstrap_repetitions": 9999,
+  "sample": {
+    "all_post_rows_before_locked_filter": 3399,
+    "analysis_observation_rows": 1737,
+    "unique_school_child_keys": 1720,
+    "schools": 107,
+    "control_observation_rows": 868,
+    "treatment_observation_rows": 869,
+    "control_schools": 54,
+    "treatment_schools": 53,
+    "teacher_score_filter_applied": false,
+    "outcome": "outcome_z",
+    "quantile_interpolation": "numpy_linear"
+  },
+  "no_individual_standard_errors": true,
+  "no_rank_preservation_claim": true
+}

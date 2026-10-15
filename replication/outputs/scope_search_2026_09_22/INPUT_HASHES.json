@@ -1,0 +1,46 @@
+[
+  {
+    "path": "scripts/audit_transition_extension.py",
+    "sha256": "7cc483412c83cb23278f3c25c7d0aed342dbaafaa405a4dfd1d7db5d8105ea6a"
+  },
+  {
+    "path": "scripts/audit_transition_scope.py",
+    "sha256": "69f3e582c4b1048915ff20a5f9950d61dcc3f3504bcf149a70f8d55d4df2e979"
+  },
+  {
+    "path": "scripts/audit_sentinel_measurement.py",
+    "sha256": "c9c7e3482208205faf5d41c3ef9e3dd25c7102ee2cd5a70d53957d90353a5e1b"
+  },
+  {
+    "path": "scripts/audit_transition_sentinels.py",
+    "sha256": "d9b8c9aff814e7ff1a5bebfd9fbee6824225a43dd57fd40e2987f1902d0b0bdc"
+  },
+  {
+    "path": "scripts/run_scope_learning_family.py",
+    "sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6"
+  },
+  {
+    "path": "scripts/run_distribution_quantile_bootstrap.py",
+    "sha256": "a56373af45d06c6f74b2a23d39419e5b69e9a22d38d23b5d9e24b4cd5a1d0e14"
+  },
+  {
+    "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rosterfin.dta",
+    "sha256": "4daab2dbbbc5783c4746e416d1a89b86016f6061961527c06569109f33b6c173"
+  },
+  {
+    "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/pre_writ_attend.dta",
+    "sha256": "c9ca70c6476ac6cb2f64321a7888c7703bf82e47e8fd530e15628435b9d72120"
+  },
+  {
+    "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/roster_rema2012.dta",
+    "sha256": "56c417864b92789d00fbc601493ce2f0254e67dd6443cf7ca1a1737968006374"
+  },
+  {
+    "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/enroll1.dta",
+    "sha256": "ecd7f08ac0b9928d65d37692db96fed8307e142916b267fbcadd0d4e3b5d2eb4"
+  },
+  {
+    "path": "data/Incentives_FINAL/Raw-Data/RandomCheck/Roster/rc_for_roster.dta",
+    "sha256": "8dcd3e8ccf359f4cb76c9141fb88e0ae194eec9505f3bce10446739918ede170"
+  }
+]

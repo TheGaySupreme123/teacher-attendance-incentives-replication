@@ -1,0 +1,28 @@
+{
+  "scope": "Independent NumPy least-squares and grouped-score covariance on audited reconstructed data; not independent raw-data reconstruction",
+  "input_script_sha256": "9dcecfa77c0d3407f850f4a47d2243845d531992cd27cb91b7847daa8de3a089",
+  "matched_main_coefficient_and_se": true,
+  "sensitivity": "Treatment interacted with each original child baseline control; same sample",
+  "results": [
+    {
+      "model": "independent_main",
+      "n": 1646,
+      "schools": 103,
+      "interaction": 0.12886185181728782,
+      "se": 0.07112897699220289,
+      "p": 0.07298070609745748,
+      "ci_low": -0.012222136788413412,
+      "ci_high": 0.2699458404229891
+    },
+    {
+      "model": "pupil_composition_sensitivity",
+      "n": 1646,
+      "schools": 103,
+      "interaction": 0.1262396314310631,
+      "se": 0.07179022359768214,
+      "p": 0.0816700351361067,
+      "ci_low": -0.016155936681302774,
+      "ci_high": 0.26863519954342896
+    }
+  ]
+}

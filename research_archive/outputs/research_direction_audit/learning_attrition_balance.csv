@@ -1,0 +1,13 @@
+stage,score_band,treat,baseline_rows,analytic_rows,attrition_rows,attrition_rate,baseline_schools,analytic_schools
+mid,low,control,365,286,79,0.21643835616438356,20,20
+mid,low,treatment,295,259,36,0.12203389830508471,16,16
+mid,middle,control,327,277,50,0.15290519877675846,19,19
+mid,middle,treatment,314,277,37,0.11783439490445857,16,16
+mid,high,control,353,275,78,0.2209631728045326,15,15
+mid,high,treatment,437,393,44,0.10068649885583525,21,21
+post,low,control,365,270,95,0.26027397260273977,20,19
+post,low,treatment,295,205,90,0.30508474576271183,16,15
+post,middle,control,333,285,48,0.14414414414414412,19,19
+post,middle,treatment,318,239,79,0.2484276729559748,16,15
+post,high,control,354,295,59,0.16666666666666663,15,15
+post,high,treatment,439,361,78,0.17767653758542146,21,20

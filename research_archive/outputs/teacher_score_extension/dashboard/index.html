@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duflo Track A Teacher-Score Dashboard</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      --bg: #f6f7f4;
+      --panel: #ffffff;
+      --ink: #20242c;
+      --muted: #68707e;
+      --line: #d9ded8;
+      --control: #596579;
+      --treat: #11866f;
+      --accent: #c84f40;
+      --gold: #c28a18;
+      --wash: #e8f3ef;
+      --shadow: 0 16px 44px rgba(30, 36, 44, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .page {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero {
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--treat);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(34px, 5.4vw, 70px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .subhead {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: #464d58;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .hero-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fafbf8;
+      color: #3c4450;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .summary-panel {
+      padding: 22px;
+      background: #1f2524;
+      color: #f6f7f4;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+      min-height: 100%;
+    }
+
+    .summary-panel h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .summary-metric {
+      display: grid;
+      gap: 4px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .summary-metric .big {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 0.95;
+      font-weight: 850;
+      color: #8ee1c8;
+    }
+
+    .summary-metric span:last-child {
+      color: #d5dbd4;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-7 { grid-column: span 7; }
+    .span-6 { grid-column: span 6; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+
+    .card-head {
+      padding: 18px 20px 10px;
+      border-bottom: 1px solid #eef1ed;
+    }
+
+    .card-head h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .card-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .chart {
+      min-height: 330px;
+      padding: 14px 16px 18px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .metric {
+      min-height: 146px;
+      background: var(--panel);
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .metric .value {
+      color: var(--ink);
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1;
+      font-weight: 850;
+    }
+
+    .metric .note {
+      color: #4b5360;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .callout {
+      padding: 20px;
+      border-top: 1px solid #eef1ed;
+      background: #fbfcfa;
+      color: #3f4650;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      padding: 0 16px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .swatch {
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      padding: 0 18px 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 0;
+      font-size: 12px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 7px;
+      border-bottom: 1px solid #ecefec;
+      vertical-align: top;
+    }
+
+    th {
+      color: #4e5662;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #fbfcfa;
+    }
+
+    td.num, th.num { text-align: right; }
+
+    .claim-list {
+      display: grid;
+      gap: 12px;
+      padding: 18px 20px 22px;
+    }
+
+    .claim {
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid #e7ebe7;
+      border-radius: 8px;
+      background: #fbfcfa;
+    }
+
+    .claim b {
+      color: var(--treat);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .claim span {
+      color: #3f4650;
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .axis text, .axis-label {
+      fill: #68707e;
+      font-size: 12px;
+    }
+
+    .gridline {
+      stroke: #e5e9e4;
+      stroke-width: 1;
+    }
+
+    .baseline {
+      stroke: #9aa29d;
+      stroke-width: 1.2;
+      stroke-dasharray: 4 5;
+    }
+
+    .value-label {
+      fill: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .small-label {
+      fill: #596170;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .footnote {
+      margin: 0;
+      padding: 14px 20px 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      border-top: 1px solid #eef1ed;
+      background: #fbfcfa;
+    }
+
+    @media (max-width: 960px) {
+      header { grid-template-columns: 1fr; }
+      .span-8, .span-7, .span-6, .span-5, .span-4 { grid-column: span 12; }
+      .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 620px) {
+      .page { width: min(100% - 20px, 1240px); padding-top: 14px; }
+      .hero, .summary-panel { padding: 18px; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .chart { min-height: 280px; padding: 10px 8px 16px; }
+      .claim { grid-template-columns: 1fr; }
+      .card-head h2 { font-size: 19px; }
+      .subhead { font-size: 16px; }
+      .table-wrap { padding: 0 10px 14px; }
+      table { font-size: 10px; }
+      th, td { padding: 8px 5px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; padding: 0; }
+      .card, .hero, .summary-panel { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <section class="hero">
+        <p class="eyebrow">Track A replication plus extension</p>
+        <h1>Duflo teacher attendance: from the original 21 pp effect to score-gap closing.</h1>
+        <p class="subhead">The original experiment asks whether camera monitoring plus attendance-linked pay got teachers to come to school. The extension asks whether that bundled treatment especially reduced absenteeism among lower-scoring teachers, or more precisely, whether it flattened the link between baseline teacher score and attendance.</p>
+        <div class="hero-row" aria-label="Data scope">
+          <span class="pill">Original anchor: Table 2</span>
+          <span class="pill">Extension: teacher-score heterogeneity</span>
+          <span class="pill">Sample: 2,927 scored observations, 107 schools</span>
+        </div>
+      </section>
+
+      <aside class="summary-panel">
+        <h2>Working claim for the paper</h2>
+        <div class="summary-metric">
+          <span class="big">98%</span>
+          <span>of the control high-minus-low teacher-score attendance gap is closed descriptively under treatment.</span>
+        </div>
+        <div class="summary-metric">
+          <span class="big">-6.9 pp</span>
+          <span>treatment by teacher-score interaction in the school-level gradient model, p = 0.026.</span>
+        </div>
+      </aside>
+    </header>
+
+    <section class="card span-12">
+      <div class="card-head">
+        <h2>What changes from the original result to the new Track A extension?</h2>
+        <p>The dashboard keeps the original randomized treatment estimate as the anchor, then adds a heterogeneity question about baseline teacher score.</p>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <span class="label">Original Table 2</span>
+          <span class="value">+20.7 pp</span>
+          <span class="note">Python replication of all post-baseline random checks matches the published rounded +0.21 effect.</span>
+        </div>
+        <div class="metric">
+          <span class="label">High-score teachers</span>
+          <span class="value">+14.5 pp</span>
+          <span class="note">Treatment increases attendance among above-median teacher-score schools.</span>
+        </div>
+        <div class="metric">
+          <span class="label">Low-score teachers</span>
+          <span class="value">+24.4 pp</span>
+          <span class="note">Point estimate is larger for below-median teacher-score schools.</span>
+        </div>
+        <div class="metric">
+          <span class="label">Interpretation shift</span>
+          <span class="value">catch-up</span>
+          <span class="note">Low-score treated schools reach about the same open rate as high-score treated schools.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Dashboard charts">
+      <article class="card span-7">
+        <div class="card-head">
+          <h2>Catch-up pattern in open rates</h2>
+          <p>Control schools have a visible high-score advantage. Under treatment, the two score groups converge to nearly identical attendance.</p>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background: var(--control)"></span>Control</span>
+          <span class="legend-item"><span class="swatch" style="background: var(--treat)"></span>Treatment</span>
+        </div>
+        <div id="catchup-chart" class="chart" role="img" aria-label="Grouped bar chart of control and treatment open rates for high-score and low-score teachers"></div>
+        <p class="footnote">Open rate is the share of post-baseline unannounced random checks where the school was open.</p>
+      </article>
+
+      <article class="card span-5">
+        <div class="card-head">
+          <h2>Gap closing, not over-performance</h2>
+          <p>The effect is larger for low-score teachers mainly because their control attendance starts lower.</p>
+        </div>
+        <div id="gap-chart" class="chart" role="img" aria-label="Bar chart of high minus low attendance gaps in control and treatment schools"></div>
+        <div class="callout"><b>Read this as:</b> treatment does not make low-score teachers outperform high-score teachers. It nearly removes the high-low attendance gap seen in control schools.</div>
+      </article>
+
+      <article class="card span-8">
+        <div class="card-head">
+          <h2>Teacher-score gradient by school</h2>
+          <p>In control schools, attendance rises with baseline teacher score. In treatment schools, that slope is nearly flat.</p>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background: var(--control)"></span>Control schools</span>
+          <span class="legend-item"><span class="swatch" style="background: var(--treat)"></span>Treatment schools</span>
+          <span class="legend-item"><span class="swatch" style="background: var(--accent)"></span>Fitted treatment-control contrast</span>
+        </div>
+        <div id="gradient-chart" class="chart" role="img" aria-label="Scatter chart of school attendance by teacher score with separate control and treatment fitted lines"></div>
+        <p class="footnote">School-level fitted slopes: control +8.4 percentage points per teacher-score SD, treatment +1.5 percentage points per SD. Treatment x score interaction is -6.9 pp, p = 0.026.</p>
+      </article>
+
+      <article class="card span-4">
+        <div class="card-head">
+          <h2>Balance check</h2>
+          <p>The score pattern is not explained by treatment schools being stacked with weaker teachers.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Baseline measure</th>
+                <th class="num">Control</th>
+                <th class="num">Treat</th>
+                <th class="num">Diff</th>
+                <th class="num">p</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Teacher score</td>
+                <td class="num">33.55</td>
+                <td class="num">34.99</td>
+                <td class="num">+1.44</td>
+                <td class="num">0.478</td>
+              </tr>
+              <tr>
+                <td>Below-median share</td>
+                <td class="num">55.6%</td>
+                <td class="num">43.4%</td>
+                <td class="num">-12.2 pp</td>
+                <td class="num">0.212</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="footnote">Treatment schools are, if anything, slightly higher scoring at baseline. Neither difference is statistically significant.</p>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <h2>Does the effect fade across score bands?</h2>
+          <p>Quartiles avoid over-reading exact teacher-score cells with very few schools.</p>
+        </div>
+        <div id="quartile-chart" class="chart" role="img" aria-label="Coefficient plot of treatment effect by teacher-score quartile"></div>
+        <p class="footnote">Dots show treatment effects; bars show 95% confidence intervals. The first three quartiles have large positive effects; the top quartile is smaller and noisier.</p>
+      </article>
+
+      <article class="card span-6">
+        <div class="card-head">
+          <h2>When does the score divergence appear?</h2>
+          <p>The high-score effect is stable; the low-score effect is especially large after the post-test.</p>
+        </div>
+        <div id="period-chart" class="chart" role="img" aria-label="Coefficient plot of treatment effects by period and teacher-score group"></div>
+        <p class="footnote">Timing is exploratory. It helps frame what to investigate further, not a separate randomized mechanism.</p>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-top:18px">
+      <article class="card span-7">
+        <div class="card-head">
+          <h2>Paper claim ladder</h2>
+          <p>Use the stronger claims first and keep weaker or non-identified interpretations out of the headline.</p>
+        </div>
+        <div class="claim-list">
+          <div class="claim">
+            <b>Strong</b>
+            <span>The bundled camera-plus-incentive treatment raises teacher attendance. The replicated all-sample effect is +20.7 percentage points and rounds to the original +0.21.</span>
+          </div>
+          <div class="claim">
+            <b>Stronger extension</b>
+            <span>Control schools show a teacher-score attendance gradient; treatment schools show a much flatter relationship.</span>
+          </div>
+          <div class="claim">
+            <b>Suggestive</b>
+            <span>The below-median group has a larger point-estimate treatment effect than the above-median group, but the binary interaction p-value is 0.105.</span>
+          </div>
+          <div class="claim">
+            <b>Avoid</b>
+            <span>Do not claim a separate camera-only or incentive-only effect from this reduced-form contrast. The randomized treatment bundles both.</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-5">
+        <div class="card-head">
+          <h2>What to look into further</h2>
+          <p>These are the next checks that would make the Track A paper more defensible.</p>
+        </div>
+        <div class="claim-list">
+          <div class="claim">
+            <b>Mechanism</b>
+            <span>Explain why lower-score control teachers had lower attendance before interpreting the larger treatment effect.</span>
+          </div>
+          <div class="claim">
+            <b>Timing</b>
+            <span>Check why the low-score effect is largest after the post-test and whether this aligns with camera/payroll implementation details.</span>
+          </div>
+          <div class="claim">
+            <b>Robustness</b>
+            <span>Keep month or block fixed-effect stability checks close to the main estimate so the extension does not look like data mining.</span>
+          </div>
+          <div class="claim">
+            <b>Learning</b>
+            <span>Treat student outcomes as secondary unless the score heterogeneity can be connected cleanly to instructional time.</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const colors = {
+      control: '#596579',
+      treatment: '#11866f',
+      accent: '#c84f40',
+      gold: '#c28a18',
+      line: '#d9ded8',
+      grid: '#e5e9e4',
+      ink: '#20242c',
+      muted: '#68707e'
+    };
+
+    const catchup = [
+      {group: 'High score', arm: 'Control', rate: 0.63390315, observations: 702, schools: 24},
+      {group: 'High score', arm: 'Treatment', rate: 0.77935946, observations: 843, schools: 30},
+      {group: 'Low score', arm: 'Control', rate: 0.5336856, observations: 757, schools: 30},
+      {group: 'Low score', arm: 'Treatment', rate: 0.7776, observations: 625, schools: 23}
+    ];
+
+    const gapData = [
+      {label: 'Control', value: 0.10021753284633039, color: colors.control, note: 'High-score attendance advantage'},
+      {label: 'Treatment', value: 0.0017594306049817376, color: colors.treatment, note: 'Nearly no high-low gap'}
+    ];
+
+    const quartiles = [
+      {label: 'Q1 lowest', detail: '3-27', effect: 0.23759191176470584, low: 0.13077081004953328, high: 0.3444130134798784, schools: '16 C / 14 T'},
+      {label: 'Q2', detail: '28-37', effect: 0.23902757382933615, low: 0.10398792658545838, high: 0.3740672210732139, schools: '16 C / 10 T'},
+      {label: 'Q3', detail: '37.5-41.5', effect: 0.21901691430707393, low: 0.08947742358930552, high: 0.3485564050248423, schools: '9 C / 15 T'},
+      {label: 'Q4 highest', detail: '42-55', effect: 0.09764115946478369, low: -0.013516782299570332, high: 0.2087991012291377, schools: '13 C / 14 T'}
+    ];
+
+    const periods = [
+      {label: 'Until mid-test', group: 'High', effect: 0.1484941250619014, low: 0.05275652304153369, high: 0.24423172708226912},
+      {label: 'Until mid-test', group: 'Low', effect: 0.21049224350828344, low: 0.10320224436131638, high: 0.3177822426552505},
+      {label: 'Mid to post-test', group: 'High', effect: 0.14562334217506634, low: 0.04411079710114915, high: 0.24713588724898353},
+      {label: 'Mid to post-test', group: 'Low', effect: 0.14358928250314684, low: 0.020222175354937394, high: 0.26695638965135626},
+      {label: 'After post-test', group: 'High', effect: 0.14338460361187644, low: 0.03517216605406344, high: 0.25159704116968945},
+      {label: 'After post-test', group: 'Low', effect: 0.3150694742873521, low: 0.1981817691775925, high: 0.4319571793971117}
+    ];
+
+    const schoolPoints = [{"treat":0,"post_open_rate":0.448,"teacher_score":32,"observations":29},{"treat":0,"post_open_rate":0.8,"teacher_score":27,"observations":30},{"treat":0,"post_open_rate":0.25,"teacher_score":25,"observations":8},{"treat":0,"post_open_rate":0.28,"teacher_score":38,"observations":25},{"treat":1,"post_open_rate":0.9,"teacher_score":39,"observations":30},{"treat":0,"post_open_rate":0.767,"teacher_score":50,"observations":30},{"treat":0,"post_open_rate":0.533,"teacher_score":19.5,"observations":30},{"treat":0,"post_open_rate":0.9,"teacher_score":42,"observations":30},{"treat":1,"post_open_rate":0.667,"teacher_score":29,"observations":6},{"treat":0,"post_open_rate":0.414,"teacher_score":38,"observations":29},{"treat":1,"post_open_rate":0.72,"teacher_score":43,"observations":25},{"treat":1,"post_open_rate":0.8,"teacher_score":14,"observations":30},{"treat":1,"post_open_rate":0.897,"teacher_score":27,"observations":29},{"treat":0,"post_open_rate":0.786,"teacher_score":43,"observations":28},{"treat":1,"post_open_rate":0.793,"teacher_score":3,"observations":29},{"treat":1,"post_open_rate":0.714,"teacher_score":41,"observations":28},{"treat":0,"post_open_rate":0.581,"teacher_score":30,"observations":31},{"treat":0,"post_open_rate":0.613,"teacher_score":15.5,"observations":31},{"treat":0,"post_open_rate":0.469,"teacher_score":46,"observations":32},{"treat":0,"post_open_rate":0.581,"teacher_score":38,"observations":31},{"treat":0,"post_open_rate":0.581,"teacher_score":24,"observations":31},{"treat":1,"post_open_rate":0.935,"teacher_score":43,"observations":31},{"treat":0,"post_open_rate":0.375,"teacher_score":27,"observations":24},{"treat":0,"post_open_rate":0.5,"teacher_score":37,"observations":24},{"treat":1,"post_open_rate":0.806,"teacher_score":43,"observations":31},{"treat":0,"post_open_rate":0.833,"teacher_score":32,"observations":30},{"treat":1,"post_open_rate":0.667,"teacher_score":25.5,"observations":18},{"treat":0,"post_open_rate":0.346,"teacher_score":26,"observations":26},{"treat":1,"post_open_rate":0.9,"teacher_score":21,"observations":30},{"treat":1,"post_open_rate":0.774,"teacher_score":26,"observations":31},{"treat":1,"post_open_rate":0.935,"teacher_score":40,"observations":31},{"treat":1,"post_open_rate":0.903,"teacher_score":49,"observations":31},{"treat":1,"post_open_rate":0.786,"teacher_score":47,"observations":28},{"treat":0,"post_open_rate":0.32,"teacher_score":31,"observations":25},{"treat":1,"post_open_rate":0.935,"teacher_score":36,"observations":31},{"treat":1,"post_open_rate":0.871,"teacher_score":17,"observations":31},{"treat":0,"post_open_rate":0.857,"teacher_score":43.5,"observations":28},{"treat":0,"post_open_rate":0.828,"teacher_score":38,"observations":29},{"treat":0,"post_open_rate":0.5,"teacher_score":27,"observations":8},{"treat":0,"post_open_rate":0.375,"teacher_score":17,"observations":8},{"treat":0,"post_open_rate":0.571,"teacher_score":31,"observations":21},{"treat":1,"post_open_rate":0.621,"teacher_score":18,"observations":29},{"treat":0,"post_open_rate":0.767,"teacher_score":47,"observations":30},{"treat":0,"post_open_rate":0.645,"teacher_score":52,"observations":31},{"treat":0,"post_open_rate":0.677,"teacher_score":30,"observations":31},{"treat":1,"post_open_rate":0.862,"teacher_score":36,"observations":29},{"treat":1,"post_open_rate":0.893,"teacher_score":38,"observations":28},{"treat":1,"post_open_rate":0.63,"teacher_score":47,"observations":27},{"treat":1,"post_open_rate":0.778,"teacher_score":39,"observations":27},{"treat":0,"post_open_rate":0.5,"teacher_score":40,"observations":30},{"treat":1,"post_open_rate":0.833,"teacher_score":43,"observations":30},{"treat":1,"post_open_rate":0.783,"teacher_score":44,"observations":23},{"treat":1,"post_open_rate":0.818,"teacher_score":41,"observations":33},{"treat":1,"post_open_rate":0.69,"teacher_score":40,"observations":29},{"treat":1,"post_open_rate":0.552,"teacher_score":37,"observations":29},{"treat":1,"post_open_rate":0.8,"teacher_score":38,"observations":30},{"treat":1,"post_open_rate":0.767,"teacher_score":31,"observations":30},{"treat":0,"post_open_rate":0.767,"teacher_score":46,"observations":30},{"treat":0,"post_open_rate":0.464,"teacher_score":38,"observations":28},{"treat":0,"post_open_rate":0.4,"teacher_score":45,"observations":30},{"treat":0,"post_open_rate":0.643,"teacher_score":33,"observations":28},{"treat":0,"post_open_rate":0.567,"teacher_score":40,"observations":30},{"treat":1,"post_open_rate":0.552,"teacher_score":20,"observations":29},{"treat":1,"post_open_rate":0.867,"teacher_score":42,"observations":30},{"treat":1,"post_open_rate":0.967,"teacher_score":40,"observations":30},{"treat":1,"post_open_rate":1,"teacher_score":33,"observations":30},{"treat":1,"post_open_rate":0.933,"teacher_score":26,"observations":30},{"treat":1,"post_open_rate":0.433,"teacher_score":46,"observations":30},{"treat":0,"post_open_rate":0.621,"teacher_score":44.5,"observations":29},{"treat":0,"post_open_rate":0.633,"teacher_score":37.5,"observations":30},{"treat":1,"post_open_rate":0.862,"teacher_score":39,"observations":29},{"treat":1,"post_open_rate":1,"teacher_score":45,"observations":29},{"treat":1,"post_open_rate":0.828,"teacher_score":36,"observations":29},{"treat":0,"post_open_rate":0.414,"teacher_score":17,"observations":29},{"treat":0,"post_open_rate":0.333,"teacher_score":34,"observations":30},{"treat":0,"post_open_rate":0.679,"teacher_score":30,"observations":28},{"treat":0,"post_open_rate":0.31,"teacher_score":33,"observations":29},{"treat":1,"post_open_rate":0.821,"teacher_score":34,"observations":28},{"treat":1,"post_open_rate":0.655,"teacher_score":53,"observations":29},{"treat":0,"post_open_rate":0.897,"teacher_score":38,"observations":29},{"treat":1,"post_open_rate":0.774,"teacher_score":45,"observations":31},{"treat":1,"post_open_rate":0.667,"teacher_score":40,"observations":30},{"treat":0,"post_open_rate":0.767,"teacher_score":55,"observations":30},{"treat":0,"post_open_rate":0.533,"teacher_score":53,"observations":30},{"treat":1,"post_open_rate":0.433,"teacher_score":22,"observations":30},{"treat":0,"post_open_rate":0.533,"teacher_score":19,"observations":30},{"treat":1,"post_open_rate":0.931,"teacher_score":36,"observations":29},{"treat":1,"post_open_rate":0.833,"teacher_score":38,"observations":30},{"treat":0,"post_open_rate":0.633,"teacher_score":37,"observations":30},{"treat":1,"post_open_rate":0.286,"teacher_score":26.5,"observations":7},{"treat":1,"post_open_rate":0.5,"teacher_score":38,"observations":8},{"treat":0,"post_open_rate":0.379,"teacher_score":32,"observations":29},{"treat":1,"post_open_rate":0.64,"teacher_score":39,"observations":25},{"treat":1,"post_open_rate":0.724,"teacher_score":51,"observations":29},{"treat":1,"post_open_rate":0.483,"teacher_score":29,"observations":29},{"treat":0,"post_open_rate":0.483,"teacher_score":36,"observations":29},{"treat":0,"post_open_rate":0.586,"teacher_score":22,"observations":29},{"treat":0,"post_open_rate":0,"teacher_score":11,"observations":3},{"treat":1,"post_open_rate":0.742,"teacher_score":25,"observations":31},{"treat":1,"post_open_rate":0.682,"teacher_score":41.5,"observations":22},{"treat":0,"post_open_rate":0.8,"teacher_score":31,"observations":30},{"treat":0,"post_open_rate":0.586,"teacher_score":23,"observations":29},{"treat":0,"post_open_rate":0.419,"teacher_score":19,"observations":31},{"treat":1,"post_open_rate":0.8,"teacher_score":14,"observations":30},{"treat":0,"post_open_rate":0.667,"teacher_score":28,"observations":30},{"treat":0,"post_open_rate":0.586,"teacher_score":45,"observations":29},{"treat":0,"post_open_rate":0.3,"teacher_score":18,"observations":10}];
+
+    const fmtPct = value => `${Math.round(value * 1000) / 10}%`;
+    const fmtPp = value => `${value >= 0 ? '+' : ''}${(value * 100).toFixed(1)} pp`;
+
+    function clearAndSvg(id, width, height) {
+      const host = document.getElementById(id);
+      host.innerHTML = '';
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      svg.setAttribute('aria-hidden', 'true');
+      host.appendChild(svg);
+      return svg;
+    }
+
+    function add(svg, tag, attrs = {}, text = '') {
+      const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+      Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+      if (text) node.textContent = text;
+      svg.appendChild(node);
+      return node;
+    }
+
+    function linear(domainMin, domainMax, rangeMin, rangeMax) {
+      return value => rangeMin + ((value - domainMin) / (domainMax - domainMin)) * (rangeMax - rangeMin);
+    }
+
+    function renderCatchup() {
+      const svg = clearAndSvg('catchup-chart', 760, 410);
+      const margin = {top: 18, right: 26, bottom: 68, left: 58};
+      const w = 760 - margin.left - margin.right;
+      const h = 410 - margin.top - margin.bottom;
+      const y = linear(0.45, 0.85, margin.top + h, margin.top);
+      const groups = ['High score', 'Low score'];
+      const groupX = { 'High score': margin.left + w * 0.25, 'Low score': margin.left + w * 0.75 };
+      const barW = 76;
+
+      [0.5, 0.6, 0.7, 0.8].forEach(tick => {
+        add(svg, 'line', {x1: margin.left, x2: margin.left + w, y1: y(tick), y2: y(tick), class: 'gridline'});
+        add(svg, 'text', {x: margin.left - 10, y: y(tick) + 4, 'text-anchor': 'end', class: 'axis-label'}, fmtPct(tick));
+      });
+
+      catchup.forEach(d => {
+        const offset = d.arm === 'Control' ? -barW * 0.62 : barW * 0.62;
+        const x = groupX[d.group] + offset - barW / 2;
+        const height = margin.top + h - y(d.rate);
+        add(svg, 'rect', {x, y: y(d.rate), width: barW, height, rx: 3, fill: d.arm === 'Control' ? colors.control : colors.treatment});
+        add(svg, 'text', {x: x + barW / 2, y: y(d.rate) - 9, 'text-anchor': 'middle', class: 'value-label'}, fmtPct(d.rate));
+        add(svg, 'text', {x: x + barW / 2, y: margin.top + h + 25, 'text-anchor': 'middle', class: 'small-label'}, d.arm);
+      });
+
+      groups.forEach(group => {
+        add(svg, 'text', {x: groupX[group], y: margin.top + h + 52, 'text-anchor': 'middle', fill: colors.ink, 'font-size': 14, 'font-weight': 850}, group);
+      });
+
+      add(svg, 'text', {x: margin.left, y: 14, fill: colors.muted, 'font-size': 12}, 'Open rate during random checks');
+      add(svg, 'line', {x1: margin.left, x2: margin.left + w, y1: y(0.45), y2: y(0.45), stroke: colors.line});
+    }
+
+    function renderGap() {
+      const svg = clearAndSvg('gap-chart', 470, 350);
+      const margin = {top: 20, right: 24, bottom: 72, left: 54};
+      const w = 470 - margin.left - margin.right;
+      const h = 350 - margin.top - margin.bottom;
+      const y = linear(0, 0.12, margin.top + h, margin.top);
+      const barW = 96;
+      [0, 0.05, 0.1].forEach(tick => {
+        add(svg, 'line', {x1: margin.left, x2: margin.left + w, y1: y(tick), y2: y(tick), class: 'gridline'});
+        add(svg, 'text', {x: margin.left - 10, y: y(tick) + 4, 'text-anchor': 'end', class: 'axis-label'}, fmtPp(tick).replace('+', ''));
+      });
+
+      gapData.forEach((d, i) => {
+        const cx = margin.left + w * (i === 0 ? 0.32 : 0.72);
+        const bh = margin.top + h - y(d.value);
+        add(svg, 'rect', {x: cx - barW / 2, y: y(d.value), width: barW, height: Math.max(2, bh), rx: 3, fill: d.color});
+        add(svg, 'text', {x: cx, y: y(d.value) - 11, 'text-anchor': 'middle', class: 'value-label'}, fmtPp(d.value));
+        add(svg, 'text', {x: cx, y: margin.top + h + 26, 'text-anchor': 'middle', fill: colors.ink, 'font-weight': 850, 'font-size': 14}, d.label);
+        add(svg, 'text', {x: cx, y: margin.top + h + 47, 'text-anchor': 'middle', class: 'small-label'}, d.note);
+      });
+    }
+
+    function renderForest(id, rows, options) {
+      const svg = clearAndSvg(id, options.width || 690, options.height || 410);
+      const width = options.width || 690;
+      const height = options.height || 410;
+      const margin = {top: 22, right: 42, bottom: 56, left: options.left || 138};
+      const w = width - margin.left - margin.right;
+      const h = height - margin.top - margin.bottom;
+      const x = linear(options.min, options.max, margin.left, margin.left + w);
+      const step = h / rows.length;
+
+      options.ticks.forEach(tick => {
+        add(svg, 'line', {x1: x(tick), x2: x(tick), y1: margin.top, y2: margin.top + h, class: tick === 0 ? 'baseline' : 'gridline'});
+        add(svg, 'text', {x: x(tick), y: margin.top + h + 26, 'text-anchor': 'middle', class: 'axis-label'}, fmtPp(tick).replace('+', ''));
+      });
+
+      rows.forEach((d, i) => {
+        const cy = margin.top + step * i + step * 0.52;
+        const color = d.group === 'Low' ? colors.treatment : d.group === 'High' ? colors.control : colors.treat;
+        add(svg, 'line', {x1: x(d.low), x2: x(d.high), y1: cy, y2: cy, stroke: color, 'stroke-width': 4, 'stroke-linecap': 'round'});
+        add(svg, 'circle', {cx: x(d.effect), cy, r: 7, fill: color});
+        add(svg, 'text', {x: margin.left - 12, y: cy + 4, 'text-anchor': 'end', fill: colors.ink, 'font-size': 13, 'font-weight': 800}, d.label);
+        if (d.detail) add(svg, 'text', {x: margin.left - 12, y: cy + 20, 'text-anchor': 'end', class: 'small-label'}, d.detail);
+        if (d.group) add(svg, 'text', {x: x(d.high) + 10, y: cy + 4, fill: color, 'font-size': 12, 'font-weight': 850}, `${d.group}: ${fmtPp(d.effect)}`);
+        else add(svg, 'text', {x: x(d.high) + 10, y: cy + 4, class: 'value-label'}, fmtPp(d.effect));
+      });
+
+      add(svg, 'text', {x: margin.left, y: height - 10, class: 'axis-label'}, 'Treatment effect on school-open rate');
+    }
+
+    function renderGradient() {
+      const svg = clearAndSvg('gradient-chart', 860, 430);
+      const margin = {top: 18, right: 32, bottom: 56, left: 62};
+      const w = 860 - margin.left - margin.right;
+      const h = 430 - margin.top - margin.bottom;
+      const x = linear(0, 58, margin.left, margin.left + w);
+      const y = linear(0, 1, margin.top + h, margin.top);
+      const mean = 34.261682;
+      const sd = 10.414168;
+      const b = {intercept: 0.563114, treat: 0.198876, score: 0.083947, interact: -0.068599};
+      const pred = (score, treat) => {
+        const z = (score - mean) / sd;
+        return b.intercept + b.treat * treat + b.score * z + b.interact * treat * z;
+      };
+
+      [0, 0.25, 0.5, 0.75, 1].forEach(tick => {
+        add(svg, 'line', {x1: margin.left, x2: margin.left + w, y1: y(tick), y2: y(tick), class: 'gridline'});
+        add(svg, 'text', {x: margin.left - 10, y: y(tick) + 4, 'text-anchor': 'end', class: 'axis-label'}, fmtPct(tick));
+      });
+      [10, 20, 30, 40, 50].forEach(tick => {
+        add(svg, 'text', {x: x(tick), y: margin.top + h + 28, 'text-anchor': 'middle', class: 'axis-label'}, tick);
+      });
+
+      schoolPoints.forEach(d => {
+        const color = d.treat ? colors.treatment : colors.control;
+        const radius = Math.max(3, Math.min(7, Math.sqrt(d.observations) * 1.1));
+        const c = add(svg, 'circle', {
+          cx: x(d.teacher_score),
+          cy: y(d.post_open_rate),
+          r: radius,
+          fill: color,
+          opacity: d.treat ? 0.56 : 0.46,
+          stroke: '#fff',
+          'stroke-width': 0.8
+        });
+        c.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'title')).textContent =
+          `${d.treat ? 'Treatment' : 'Control'} school: score ${d.teacher_score}, open ${fmtPct(d.post_open_rate)}, n ${d.observations}`;
+      });
+
+      const scores = [3, 55];
+      const controlPath = `M ${x(scores[0])} ${y(pred(scores[0], 0))} L ${x(scores[1])} ${y(pred(scores[1], 0))}`;
+      const treatPath = `M ${x(scores[0])} ${y(pred(scores[0], 1))} L ${x(scores[1])} ${y(pred(scores[1], 1))}`;
+      add(svg, 'path', {d: controlPath, fill: 'none', stroke: colors.control, 'stroke-width': 4, 'stroke-linecap': 'round'});
+      add(svg, 'path', {d: treatPath, fill: 'none', stroke: colors.treatment, 'stroke-width': 4, 'stroke-linecap': 'round'});
+      add(svg, 'text', {x: x(43), y: y(pred(43, 0)) + 22, fill: colors.control, 'font-size': 12, 'font-weight': 850}, 'Control: +8.4 pp/SD');
+      add(svg, 'text', {x: x(34), y: y(pred(34, 1)) - 14, fill: colors.treatment, 'font-size': 12, 'font-weight': 850}, 'Treatment: +1.5 pp/SD');
+      add(svg, 'text', {x: margin.left, y: 14, fill: colors.muted, 'font-size': 12}, 'School open rate');
+      add(svg, 'text', {x: margin.left + w / 2, y: 420, 'text-anchor': 'middle', fill: colors.muted, 'font-size': 12}, 'Baseline teacher score');
+    }
+
+    function renderAll() {
+      renderCatchup();
+      renderGap();
+      renderGradient();
+      renderForest('quartile-chart', quartiles, {
+        width: 650,
+        height: 390,
+        left: 132,
+        min: -0.05,
+        max: 0.42,
+        ticks: [0, 0.1, 0.2, 0.3, 0.4]
+      });
+      renderForest('period-chart', periods, {
+        width: 650,
+        height: 430,
+        left: 142,
+        min: -0.18,
+        max: 0.47,
+        ticks: [-0.1, 0, 0.1, 0.2, 0.3, 0.4]
+      });
+    }
+
+    renderAll();
+    window.addEventListener('resize', () => {
+      window.clearTimeout(window.__chartResize);
+      window.__chartResize = window.setTimeout(renderAll, 120);
+    });
+  </script>
+</body>
+</html>

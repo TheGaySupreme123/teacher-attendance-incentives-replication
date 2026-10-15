@@ -1,0 +1,21 @@
+{
+  "command": "python3 scripts/run_direction02_bootstrap_observed_only.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T10:46:21.224978+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "numpy": "1.26.4",
+  "pandas": "2.3.0",
+  "scipy": "1.15.3",
+  "script_sha256": "5f9e19aa62fced66302b28215301f9fc04c38f297a864fcefe59d9ffd1a8020b",
+  "attrition_script_sha256": "399e377ccb850b9796c130e7f70c71a536ec1056ca58d708d00c9d7a17569c47",
+  "wildbootstrap_script_sha256": "ccadfaa61719ebb8f71fcf6fef0d33c28e57842917743d4ed5f6247a321b7cf0",
+  "git_commit": "dcca6f065c7dd0806e1fb483289cbf0bd090dab3",
+  "seed": 20260922,
+  "bootstrap_repetitions": 9999,
+  "batch_size": 500,
+  "sample_observation_rows": 1625,
+  "unique_school_child_keys": 1610,
+  "sample_schools": 101,
+  "vectorized_refit_validation_pass": true
+}

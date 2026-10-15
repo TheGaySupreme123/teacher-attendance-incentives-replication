@@ -1,0 +1,5 @@
+check,coefficient,coefficient_percentage_points,se_clustered,ci_low,ci_high,ci_low_percentage_points,ci_high_percentage_points,p_value,wild_bootstrap_p_value,n,schools,source
+Main interaction,0.2109930287,21.09930287,0.07178674539,0.06872854893,0.3532575084,6.872854893,35.32575084,0.004011126002,0.0072,2195,111,outputs/scope_search_2026_09_22/transition/transition_scope_model_results.csv
+Geographic block controls,0.2210288191,22.10288191,0.06993008264,0.08244380913,0.359613829,8.244380913,35.9613829,0.002033416953,,2195,111,outputs/scope_search_2026_09_22/transition/transition_scope_model_results.csv
+December 2005 endpoint,0.1969002145,19.69002145,0.07513327729,0.04800369406,0.345796735,4.800369406,34.5796735,0.01001615355,,2195,111,outputs/scope_search_2026_09_22/transition/transition_scope_model_results.csv
+Exclude ambiguous attendance-code classifications,0.2662982922,26.62982922,0.07368772449,0.120266518,0.4123300663,12.0266518,41.23300663,0.0004564350638,0.0011,2082,111,outputs/scope_search_2026_09_22/transition/sentinel_drop_interaction.csv

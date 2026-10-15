@@ -1,0 +1,4 @@
+pre_cluster_label,schools,treated_share,teacher_score,infra_index,pre_oral_total_mean,pre_written_share
+pre-cluster 1,34,0.64705884,38.14706,4.5,11.304556,0.0897267826626011
+pre-cluster 2,37,0.4054054,23.81081,3.3783784,11.674344,0.1813439557265593
+pre-cluster 3,32,0.5,43.5625,2.0,12.211655,0.21813852815152945

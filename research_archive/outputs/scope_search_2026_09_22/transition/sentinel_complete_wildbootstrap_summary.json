@@ -1,0 +1,18 @@
+{
+  "outcome": "source_drop",
+  "null": "treat_x_pre_writ = 0; treatment main effect and pre_writ main effect remain unrestricted",
+  "inference": "null-imposed school-level Rademacher wild bootstrap-t",
+  "estimate": 0.2662982921577478,
+  "se_clustered": 0.07368772449409959,
+  "observed_t": 3.6138759065503665,
+  "classical_p_value": 0.0004564350637677392,
+  "wild_bootstrap_p_value": 0.0011,
+  "wild_bootstrap_extreme_count": 10,
+  "wild_bootstrap_monte_carlo_se": 0.00033148001448051134,
+  "bootstrap_repetitions": 9999,
+  "bootstrap_seed": 20260922,
+  "n": 2082,
+  "schools": 111,
+  "cluster_df": 110,
+  "validation_pass": true
+}

@@ -1,0 +1,5 @@
+score_group,treat,schools,mean_score
+high_score,control,24,42.979168
+high_score,treatment,30,42.316666
+low_score,control,30,26.0
+low_score,treatment,23,25.434782

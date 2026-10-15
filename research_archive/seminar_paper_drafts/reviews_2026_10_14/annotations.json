@@ -1,0 +1,370 @@
+[
+  {
+    "line": 5,
+    "category": "Correction",
+    "anchor": "randomize schools to monitoring via photographs",
+    "text": "Replace with “randomize schools to a package of camera monitoring and attendance-linked pay.” Assignment identifies the effect of the package; it does not identify a separate effect of photographs. Apply the same qualification to “monitoring caused” later in this excerpt. [E1: printed pp. 1242, 1246]",
+    "equation": false,
+    "id": "N01"
+  },
+  {
+    "line": 5,
+    "category": "Clarity",
+    "anchor": "study whether monitoring affects teacher absenteeism",
+    "text": "For the opening account of the original paper, state the broader question about incentives, teacher absence, and learning; then give its headline findings (about 21 percentage points lower absence and 0.17 SD higher test scores), before identifying the attendance and departure results you replicate. This makes the original contribution and your selected replication scope clear. [E1: printed pp. 1241–1242]",
+    "equation": false,
+    "id": "N02"
+  },
+  {
+    "line": 6,
+    "category": "Clarity",
+    "anchor": "the control group continued to receive surprise visits from researchers",
+    "text": "Replace with “Researchers made unannounced attendance visits in both treatment and control schools. Only treatment schools used the daily camera records to calculate attendance-linked pay; control teachers received fixed pay.” The existing sentence can imply that these research visits were unique to control schools. [E1: printed pp. 1246–1248; E2]",
+    "equation": false,
+    "id": "N03"
+  },
+  {
+    "line": 7,
+    "category": "Correction",
+    "anchor": "I replicate the paper’s Table 2",
+    "text": "Specify “the pooled all-teacher result in Table 2, Panel A, and all three outcome rows of Table 10.” Our attendance reconstruction reproduces that selected pooled result, not every panel and time-period specification in original Table 2. Use this scope consistently in lines 8–9. [E1: printed pp. 1249–1250, 1274; E3]",
+    "equation": false,
+    "id": "N04"
+  },
+  {
+    "line": 7,
+    "category": "Requirement",
+    "anchor": "in Python",
+    "text": "State the Python version and analysis-package versions, or point explicitly to an appendix/environment file that supplies them, with the reproduction commands. Track A asks for exact software, sample, years, variable definitions, and missing-data treatment; submitted tables and figures must be reproducible from code and a README. A public folder link is encouraged, rather than mandatory. This excerpt alone does not show whether those details already appear elsewhere. [E5: pp. 3–4]",
+    "equation": false,
+    "id": "N05"
+  },
+  {
+    "line": 7,
+    "category": "Clarity",
+    "anchor": "continue with the extension on my own",
+    "text": "If you mean that the extension is your addition to the original authors’ analysis, say that directly. Avoid implying unassisted coding or writing: the project used AI assistance. The full paper’s required AI Use Statement should accurately identify the tools, model/version, dates, and roles; keep the transcripts. Its absence from this two-section excerpt is not itself a finding. [E5: pp. 2–3]",
+    "equation": false,
+    "id": "N06"
+  },
+  {
+    "line": 9,
+    "category": "Correction",
+    "anchor": "As in the original table, schools were open in 78.7%",
+    "text": "Say “My reconstruction gives 78.7% in treatment and 58.0% in control; these round to the published 0.79 and 0.58.” Replace “I match all results” with “I match the selected Table 2, Panel A estimates at their reported precision.” The reconstructed decimals are more precise than those displayed in the article. [E1: Table 2; E3]",
+    "equation": false,
+    "id": "N07"
+  },
+  {
+    "line": 9,
+    "category": "Requirement",
+    "anchor": "The 95% confidence interval is [14.9, 26.6]",
+    "text": "Add “percentage points.” The coefficient 0.207 and SE 0.030 are in probability units; the corresponding effect and SE are 20.7 and 3.0 percentage points. Use one explicit scale throughout the prose and each exhibit. Also change “SEs … in parentheses” if the final display is “SE 0.030” rather than “(0.030).” [E3; E5: p. 2]",
+    "equation": false,
+    "id": "N08"
+  },
+  {
+    "line": 10,
+    "category": "Correction",
+    "anchor": "select the last five times they were checked when the school was open",
+    "text": "Say “the latest up to five observed checks when the school was open.” Some children have fewer than five. Zero summed recoded attendance defines recorded departure under the distributed rule; it does not establish permanent exit from education. Replace “then this child has left” with “then the child is classified as having departed under this rule.” [E2: reconstruction, lines 143–159; E4]",
+    "equation": false,
+    "id": "N09"
+  },
+  {
+    "line": 10,
+    "category": "Correction",
+    "anchor": "The dependent variables are (1)",
+    "text": "List all three replicated outcomes: recorded departure; recorded government-school marker; and residual departure, equal to departure minus the marker. These correspond to the original Table 10 rows “Child left NFE,” “Child enrolled in government school,” and “Child dropped out.” Retain the safer residual label because the third row does not verify dropout from education. [E1: Table 10; E2; E3]",
+    "equation": false,
+    "id": "N10"
+  },
+  {
+    "line": 11,
+    "category": "Correction",
+    "anchor": "merged on to random checks using these identifiers",
+    "text": "Correct the joins: roster rows merge to school random-check records on school ID and visit year/month/day; child enrollment and baseline writing status merge on school ID and child ID. The fitted reconstruction does not merge the school random-check file on child ID or impose “random check time period = baseline” on the writing-status join. Name the two roster inputs (roster_rema2012.dta and rosterfin.dta) and move detailed join rules to Appendix B if needed. [E2: reconstruction, lines 100–136]",
+    "equation": false,
+    "id": "N11"
+  },
+  {
+    "line": 11,
+    "category": "Correction",
+    "anchor": "I code these as having left but the destination unknown",
+    "text": "Replace with “Attendance determines recorded departure first. A blank reason contributes no government-school marker; another selected record can still supply reason equal to ‘2’ for that child.” Blank reasons do not themselves create departure. The child-level marker requires recorded departure and at least one selected record with reason equal to “2”; it is not independently verified follow-up enrollment. Apply that definition to “we know” in this paragraph and later passages. [E2: reconstruction, lines 143–159]",
+    "equation": false,
+    "id": "N12"
+  },
+  {
+    "line": 11,
+    "category": "Requirement",
+    "anchor": "Although parts of this process are unclear to me",
+    "text": "Replace this general uncertainty with the specific documented issues: undocumented attendance codes and the numeric/text reason-field append convention. Track A requires an exact account of variable construction and missing-data treatment. It is appropriate to say that codebook meanings remain unresolved, while being precise about the implemented recodes. [E2; E4; E5: p. 3]",
+    "equation": false,
+    "id": "N13"
+  },
+  {
+    "line": 12,
+    "category": "Correction",
+    "anchor": "Treatment causes a statistically significant 8.4pp increase in departure",
+    "text": "Use “Assignment to the bundled program increased recorded departure by 8.4 percentage points (clustered SE 4.1 points; p = .044) and the recorded government-school marker by 10.1 points (SE 3.5 points).” The nominal 5% significance claim for total recorded departure is supported. Qualify the endpoints rather than implying verified educational withdrawal or transfer. [E3: Table 10 reproduction]",
+    "equation": false,
+    "id": "N14"
+  },
+  {
+    "line": 13,
+    "category": "Requirement",
+    "anchor": "a −1.8 point change in residual departure",
+    "text": "Use “−1.8 percentage points (clustered SE 3.1 points; p = .564),” or ensure the referenced main table gives that uncertainty. The aggregate residual effect is not statistically distinguishable from zero. “All child-level reference values” should specify the reconstructed departure indicators, rather than every variable in the package. [E2; E3; E5: p. 2]",
+    "equation": false,
+    "id": "N15"
+  },
+  {
+    "line": 16,
+    "category": "Correction",
+    "anchor": "examines whether writers and nonwriters differ in departures",
+    "text": "Specify “whether the treatment effect on recorded departure differs between baseline writers and nonwriters.” This is a difference between two treatment effects, rather than simply a difference in departure levels. Keep the hypothesis about readiness tentative: written-test status is a coarse baseline preparation proxy, not a validated readiness or permanent-ability measure. Replace “drop-out from education” with “departure without the recorded government-school marker,” because educational dropout is not observed. [E1; E2; E3]",
+    "equation": false,
+    "id": "N16"
+  },
+  {
+    "line": 17,
+    "category": "Requirement",
+    "anchor": "In Table 4",
+    "text": "Choose final exhibit numbers and use them consistently. Here the model is assigned to Table 4, the main effects later to Table 2, and a placeholder to Table 3. Distinguish “original Table 10” from your own tables. A workable arrangement is Table 1 for replication, Table 2 for group treatment effects, and Table 3 for the three interaction outcomes; another consistent arrangement is acceptable. [E5: pp. 2–3]",
+    "equation": false,
+    "id": "N17"
+  },
+  {
+    "line": 18,
+    "category": "Correction",
+    "anchor": "(1)",
+    "text": "Replace the displayed equation with the model below. The fitted primary model has a common intercept, treatment, a standalone baseline-writing indicator, and their interaction. It has no school, child, or class fixed effects and no observation-specific treatment coefficients. School fixed effects would absorb school-level treatment assignment. Block/geographic indicators belong only to the separate robustness specification. [E2: model; E3: primary_consensus_no_fe]",
+    "equation": true,
+    "id": "N18"
+  },
+  {
+    "line": 19,
+    "category": "Correction",
+    "anchor": "departure rate among nonwriters in control schools (α_s)",
+    "text": "Following the corrected equation, the four cell means are α, α + τ, α + β, and α + β + τ + δ. Replace γ with β and remove coefficient subscripts. Your interpretation of τ, τ + δ, and δ is correct. For the writer effect, the SE uses Var(τ) + Var(δ) + 2Cov(τ, δ); δ alone has its own clustered SE. [E2; E3]",
+    "equation": false,
+    "id": "N19"
+  },
+  {
+    "line": 20,
+    "category": "Correction",
+    "anchor": "known to be attending a government school at follow-up",
+    "text": "Replace with “classified as departed and carrying a government-school reason marker in at least one selected record.” The marker is an operational reason-field outcome, not an independently verified follow-up attendance measure. Residual departure is the remaining recorded departures, including missing or unrecorded destinations. [E2: reconstruction, lines 143–159]",
+    "equation": false,
+    "id": "N20"
+  },
+  {
+    "line": 20,
+    "category": "Correction",
+    "anchor": "follow-up-up 9,999 Rademacher randomization draws",
+    "text": "Replace with “9,999 null-imposed school-level Rademacher wild-bootstrap-t draws, seed 20260922.” These are random signs applied at the school level to restricted residuals, not new random assignments of treatment. The tested null is δ = 0, while the treatment and writing main effects remain unrestricted. Delete the duplicated “follow-up-up.” [E2: scope, lines 200–243; E3: bootstrap summaries]",
+    "equation": false,
+    "id": "N21"
+  },
+  {
+    "line": 20,
+    "category": "Correction",
+    "anchor": "p-values for τ + δ",
+    "text": "Replace with “p-values for the interaction δ, the writer-minus-nonwriter difference in treatment effects.” τ + δ is the writer treatment effect. Holm adjusts the three conventional school-clustered interaction p-values; the supplementary wild-bootstrap p-values are reported separately and were not Holm-adjusted. Preserve the caveat that the three-outcome adjustment does not account for the earlier search across extension directions. [E3]",
+    "equation": false,
+    "id": "N22"
+  },
+  {
+    "line": 38,
+    "category": "Correction",
+    "anchor": ".010",
+    "text": "The displayed table has two rows even though line 20 says three outcomes. Add the total recorded-departure interaction row: 21.1 percentage points; 95% CI [6.9, 35.3]; clustered p = .004; Holm p = .012; wild-bootstrap p = .007. Fill the government-marker Holm cell with .534 and its wild-bootstrap cell with “—”, defined as not estimated/reported. Its wild p-value must not be invented. This repairs the stated three-outcome display; alternatively, clearly cross-reference another exhibit that shows the total interaction. [E3]",
+    "equation": false,
+    "id": "N23"
+  },
+  {
+    "line": 39,
+    "category": "Correction",
+    "anchor": "sum to the estimate for Departure in Table 2",
+    "text": "Specify “the government-marker and residual interaction point estimates sum to the total recorded-departure interaction: 4.8 + 16.3 = 21.1 percentage points.” They do not sum to the aggregate 8.4-point replication effect. The decomposition applies to point estimates on the same sample/design; SEs, confidence intervals, and p-values do not add. Use the final total-interaction table reference. [E2; E3]",
+    "equation": false,
+    "id": "N24"
+  },
+  {
+    "line": 39,
+    "category": "Requirement",
+    "anchor": "Notes: Table reports interaction coefficient",
+    "text": "Add that confidence intervals and conventional p-values use SEs clustered over 111 schools, with 110 degrees of freedom; Holm covers the three δ tests; wild-bootstrap values use the stated null-imposed school procedure and are separate. Define all three outcomes and the dash. Explain any significance stars if you use them. Label estimates and confidence intervals as percentage points and use a publication-quality table in the final paper. The existing N = 2,195 and school count are correct. [E3; E5: p. 2]",
+    "equation": false,
+    "id": "N25"
+  },
+  {
+    "line": 40,
+    "category": "Correction",
+    "anchor": "and Duflo, Hanna and Ryan (2012) report it as exploratory",
+    "text": "Delete or complete this fragment without attributing our exploratory departure interaction to the original authors. They did not report this interaction; the exploratory label applies to our extension after examining several directions. Replace “high achievers” with “baseline writers.” Residual departure really is the residual operational category; its limitation is that it does not identify dropout or any particular destination. [E1: Tables 7, 9, 10; E2; E3]",
+    "equation": false,
+    "id": "N26"
+  },
+  {
+    "line": 41,
+    "category": "Requirement",
+    "anchor": "Table here: Table 3 about:",
+    "text": "Replace this placeholder with the numbered, titled table actually discussed. Likewise replace the Figure 1 placeholder on the next line with a numbered, titled figure using labeled units and uncertainty, or remove its references if it is not included. Table and figure numbering are separate sequences. A coefficient plot is recommended by the assignment and would suit these effects, but that specific figure type is not mandatory. [E5: pp. 2–3]",
+    "equation": false,
+    "id": "N27"
+  },
+  {
+    "line": 43,
+    "category": "Correction",
+    "anchor": "8.4 percentage points, as did the original study",
+    "text": "Say “My reconstruction gives 8.4 percentage points, which rounds to the published 0.08.” Keep “recorded departure” and “bundled program” here. The journal table displays a rounded 8-point effect; 8.4 is our reconstruction at finer precision. [E1: Table 10; E3]",
+    "equation": false,
+    "id": "N28"
+  },
+  {
+    "line": 43,
+    "category": "Requirement",
+    "anchor": "(Duflo, Hanna and Ryan (2012) table 10 (E112523V1))",
+    "text": "Use one author-date convention throughout. For example, “Duflo, Hanna, and Ryan (2012, Table 10)” in text avoids nested citations. Check the similar forms in lines 5, 44, and 49. Consistent APA or Chicago author-date is an explicit requirement. [E5: p. 1]",
+    "equation": false,
+    "id": "N29"
+  },
+  {
+    "line": 43,
+    "category": "Clarity",
+    "anchor": "E112523V1",
+    "text": "For clear provenance, cite the replication dataset separately as Version 1, DOI 10.3886/E112523V1, rather than treating the package ID as the journal-table reference. This is a provenance suggestion; the assignment does not prescribe this exact dataset-entry format. [E6]",
+    "equation": false,
+    "id": "N30"
+  },
+  {
+    "line": 44,
+    "category": "Correction",
+    "anchor": "based on their performance in a baseline test",
+    "text": "Use “by baseline written-versus-oral test status.” This extension uses the existing protocol indicator, not the child’s achieved score or a passing-score cutoff. Apply that wording to “performance,” “ability,” and “children who could write” later in the excerpt. Your statement that original Table 10 does not report this particular heterogeneity analysis is supported. [E1: Tables 7, 9, 10; E2; E3]",
+    "equation": false,
+    "id": "N31"
+  },
+  {
+    "line": 46,
+    "category": "Correction",
+    "anchor": "leave out the two children in my sample of 2,195",
+    "text": "Replace with “The aggregate replication uses 2,197 children. I exclude the two eligible children with conflicting baseline-writing records before the interaction analysis, leaving 2,195.” Line 14 already states this correctly. The present wording could imply a further reduction to 2,193. [E2; E3]",
+    "equation": false,
+    "id": "N32"
+  },
+  {
+    "line": 46,
+    "category": "Correction",
+    "anchor": "the standard errors would not be comparable",
+    "text": "Delete this reason. All SEs can be reported on the same probability/percentage-point scale with the same school clustering. The estimates differ in estimand and slightly in sample, so label those differences explicitly. Also reconcile “Column 1 replicates” with “I do not report … together.” Columns giving nonwriter and writer effects contain τ and τ + δ, not two interaction coefficients. [E2; E3]",
+    "equation": false,
+    "id": "N33"
+  },
+  {
+    "line": 47,
+    "category": "Requirement",
+    "anchor": "26.1 percentage point treatment-control difference",
+    "text": "These point estimates are correct. Supply their uncertainty in the referenced table or here: writer effect 26.1, 95% CI [10.0, 42.3]; nonwriter effect 5.0, 95% CI [−2.4, 12.4], all in percentage points. The direct difference 21.1, CI [6.9, 35.3], and its p-values are also correct. Do not infer heterogeneity merely from one subgroup being significant and the other not; the δ test already supplies the right comparison. [E3; E5: p. 2]",
+    "equation": false,
+    "id": "N34"
+  },
+  {
+    "line": 47,
+    "category": "Correction",
+    "anchor": "as in the original paper",
+    "text": "Delete this attribution after the wild-bootstrap statement. School-clustered SEs reproduce the original inference convention; the wild-bootstrap and Holm checks are additions in this extension. [E1: Tables 2, 9, 10; E3]",
+    "equation": false,
+    "id": "N35"
+  },
+  {
+    "line": 48,
+    "category": "Correction",
+    "anchor": "interaction with baseline ability is much larger",
+    "text": "Say “The residual-departure interaction has a larger point estimate than the government-marker interaction (16.3 versus 4.8 percentage points).” No direct residual-minus-government contrast test was reported, so this is a point-estimate comparison, not an established difference between the two effects. Use baseline writing status rather than ability. [E3]",
+    "equation": false,
+    "id": "N36"
+  },
+  {
+    "line": 49,
+    "category": "Correction",
+    "anchor": "significantly higher gains in learning",
+    "text": "Replace with “larger estimated learning gains among baseline writers.” Original Table 9 reports subgroup estimates; it does not report a formal equality test establishing that writer gains exceed nonwriter gains. Also qualify Table 7 as a comparison among children who stayed, a sample selected after treatment. Its 14-versus-10-point comparison does not by itself explain why particular children departed. [E1: printed pp. 1271–1274]",
+    "equation": false,
+    "id": "N37"
+  },
+  {
+    "line": 51,
+    "category": "Correction",
+    "anchor": "the first two sum to departure as coded originally",
+    "text": "Name the components explicitly: “The government-marker and residual-departure interaction estimates sum to the total recorded-departure interaction.” This avoids implying that total departure plus the government marker sums to departure. “Including missing” means departures with missing destination reasons, not that every missing attendance or reason is automatically a departure. [E2; E3]",
+    "equation": false,
+    "id": "N38"
+  },
+  {
+    "line": 51,
+    "category": "Correction",
+    "anchor": "such a pattern is not able to explain the difference between the groups",
+    "text": "Replace with “The recorded government-school marker does not establish a larger treatment effect for writers than nonwriters; its interaction is 4.8 percentage points, with CI [−10.5, 20.2]. Missing destination records prevent a stronger conclusion about actual transfers.” A nonsignificant marker interaction does not rule out a transfer explanation, nor test whether the absolute treatment effect among writers is zero. [E3; E4]",
+    "equation": false,
+    "id": "N39"
+  },
+  {
+    "line": 51,
+    "category": "Clarity",
+    "anchor": "I report all three to be clear about the limitation",
+    "text": "Frame these outcomes as a decomposition diagnostic within the single baseline-writing extension. Track A asks for one main point and one sensible change; this framing preserves the same heterogeneity question rather than opening a separate destination study. Your caveat about interpretation is useful. [E5: p. 3]",
+    "equation": false,
+    "id": "N40"
+  },
+  {
+    "line": 52,
+    "category": "Correction",
+    "anchor": "some have a coded reason for departure that does not appear in the available codebooks",
+    "text": "Replace with “113 recorded-departure classifications involve attendance values whose meanings are not established by the supplied codebook.” These are undocumented attendance sentinel codes, not unknown departure-reason codes. The counts 145, 113, overlap 28, and union 230 are correct for the 2,195-child extension sample. Also correct “excluding children with departure coded” to “excluding the 113 ambiguous attendance-based departure classifications.” [E4]",
+    "equation": false,
+    "id": "N41"
+  },
+  {
+    "line": 52,
+    "category": "Correction",
+    "anchor": "to minimize the observations with fewer than five checks",
+    "text": "Replace with “to test dependence on the final January–February 2006 endpoint records, whose appended reason values become blank under the distributed Stata convention.” The fixed December 31, 2005 cutoff was not chosen to minimize short histories; an earlier cutoff can reduce observed checks. Describe the regional check as adding existing school-block/geographic indicators, without calling them verified randomization strata. Keep the detailed results in the appendix. [E2: scope, lines 11–15, 38–41, 88–96; E4; E5: p. 3]",
+    "equation": false,
+    "id": "N42"
+  },
+  {
+    "line": 52,
+    "category": "Clarity",
+    "anchor": "bounding relies on other observations in the sample",
+    "text": "Be precise: these bounds vary the ambiguous children’s binary departure classifications while holding the other observed records fixed. They are algebraic observed-sample ranges, not confidence intervals or proof of statistical significance under every coding. The exclusion check changes the sample. Retain the present warning that none repairs treatment-dependent observation windows. [E4]",
+    "equation": false,
+    "id": "N43"
+  },
+  {
+    "line": 53,
+    "category": "Correction",
+    "anchor": "schools run by nonwriters",
+    "text": "Writer/nonwriter describes children, not teachers, principals, or the people running schools. Replace the four affected spans here: “children … who went to schools run by nonwriters” → “baseline nonwriter children”; “schools run by writers” → “baseline writer children”; “whether its principal was a writer” → “the child’s baseline writing status”; and the final “children who went to schools run by writers than nonwriters” → “baseline writers than baseline nonwriters.” The open-check means 15.4/20.4 and 15.2/21.9 are correctly reported for those child groups. [E2; E3; E4]",
+    "equation": false,
+    "id": "N44"
+  },
+  {
+    "line": 53,
+    "category": "Correction",
+    "anchor": "reason for departure is missing for 66.4% of observations",
+    "text": "Specify the denominator: “Reason fields are blank in 7,112 of 10,707 selected open-school check records (66.4%).” This is a check-record share, not the share of the 2,195 children or the share of departures with unknown destinations. A blank reason on a nondeparture check is not necessarily missing destination information. [E4: measurement summary]",
+    "equation": false,
+    "id": "N45"
+  },
+  {
+    "line": 53,
+    "category": "Clarity",
+    "anchor": "common treatment-proof measure of exiting education",
+    "text": "Use “a treatment-independent measure of permanent educational exit.” Your central warning is sound: treatment affects opportunities to observe children in open schools, so a causal effect on the recorded endpoint need not be a causal effect on leaving education. Keep the conclusion limited to recorded NFE departure and the child-level subgroup difference. [E2; E4]",
+    "equation": false,
+    "id": "N46"
+  }
+]

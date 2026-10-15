@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-09",
+  "library": "Tel Aviv University Primo",
+  "entry_url": "https://tau.primo.exlibrisgroup.com/nde/home?vid=972TAU_INST:NDE&lang=he",
+  "search_method": "Initial teacher attendance incentives search with peer-reviewed facet; subsequent title searches verified the journal, publication year and review badge individually. Title searches reset the facet. The WBRO article lacked the catalogue review badge and was verified against the journal policy instead. Non-journal duplicate versions were excluded.",
+  "access_note": "User signed in to TAU. ScienceDirect exposed Cilliers 2018 full text with TAU institutional access. A JSTOR route for Banerjee 2007 reached institutional authentication, but its reader showed zero pages and did not provide readable full text in that attempt. Catalogue availability and actual reading depth are recorded separately.",
+  "records": {
+    "dhr2012": {"docid":"cdi_proquest_journals_1019773931","peer_badge":true,"journal":"American Economic Review","year":2012},
+    "kremer2005": {"docid":"cdi_crossref_citationtrail_10_1162_jeea_2005_3_2_3_658","peer_badge":true,"journal":"Journal of the European Economic Association","year":2005},
+    "guerrero2013": {"docid":"cdi_informaworld_taylorfrancis_310_1080_19439342_2013_864695","peer_badge":true,"journal":"Journal of Development Effectiveness","year":2013},
+    "cilliers2018": {"docid":"cdi_elsevier_sciencedirect_doi_10_1016_j_jpubeco_2018_04_010","peer_badge":true,"journal":"Journal of Public Economics","year":2018,"institutional_fulltext_read":true},
+    "glewwe2010": {"docid":"cdi_jstor_primary_25760225","peer_badge":true,"journal":"American Economic Journal Applied Economics","year":2010},
+    "muralidharan2011": {"docid":"cdi_crossref_citationtrail_10_1086_659655","peer_badge":true,"journal":"Journal of Political Economy","year":2011},
+    "banerjee2007": {"docid":"cdi_proquest_journals_210981230","peer_badge":true,"journal":"Quarterly Journal of Economics","year":2007,"institutional_fulltext_read":false},
+    "duflo2011": {"docid":"cdi_unpaywall_primary_10_1257_aer_101_5_1739","peer_badge":true,"journal":"American Economic Review","year":2011},
+    "linden2012": {"docid":"cdi_crossref_citationtrail_10_1016_j_jdeveco_2011_11_002","peer_badge":true,"journal":"Journal of Development Economics","year":2012},
+    "banerjee2008": {"docid":"cdi_crossref_citationtrail_10_1162_JEEA_2008_6_2_3_487","peer_badge":true,"journal":"Journal of the European Economic Association","year":2008},
+    "deree2018": {"docid":"cdi_jstor_primary_26864967","peer_badge":true,"journal":"Quarterly Journal of Economics","year":2018},
+    "mbiti2019": {"docid":"cdi_jstor_primary_26760745","peer_badge":true,"journal":"Quarterly Journal of Economics","year":2019},
+    "fryer2013": {"docid":"cdi_crossref_primary_10_1086_667757","peer_badge":true,"journal":"Journal of Labor Economics","year":2013},
+    "duflo2015": {"docid":"cdi_proquest_miscellaneous_1686419697","peer_badge":true,"journal":"Journal of Public Economics","year":2015},
+    "burde2013": {"docid":"cdi_crossref_primary_10_1257_app_5_3_27","peer_badge":true,"journal":"American Economic Journal Applied Economics","year":2013},
+    "evans2016": {"docid":"cdi_econis_primary_898633621","peer_badge":false,"journal":"World Bank Research Observer","year":2016,"peer_review_policy_verified":true},
+    "ganimian2016": {"docid":"cdi_crossref_citationtrail_10_3102_0034654315627499","peer_badge":true,"journal":"Review of Educational Research","year":2016},
+    "singh2024": {"docid":"cdi_unpaywall_primary_10_1093_ej_ueae017","peer_badge":true,"journal":"Economic Journal","year":2024},
+    "cameron2008": {"docid":"cdi_crossref_citationtrail_10_1162_rest_90_3_414","peer_badge":true,"journal":"Review of Economics and Statistics","year":2008},
+    "holm1979": {"docid":"cdi_jstor_primary_4615733","peer_badge":true,"journal":"Scandinavian Journal of Statistics","year":1979}
+  }
+}

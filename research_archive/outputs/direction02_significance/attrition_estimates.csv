@@ -1,0 +1,5 @@
+model,term,coefficient,se_clustered,p_value,ci_low,ci_high,n,clusters,se_conditional,p_conditional,conditional_ci_low,conditional_ci_high,n_observed,clusters_observed,bootstrap_requested,bootstrap_valid,bootstrap_ci_low,bootstrap_ci_high,bootstrap_two_sided_sign_fraction_p,bootstrap_excludes_zero
+linear_probability_clustered,treat_score_z,-0.03142639695621887,0.04590569801965051,0.4950993447477653,-0.1224389081468775,0.05958611423443975,2104.0,107.0,,,,,,,,,,,,
+source_compatible_audited_complete_case,treat_score_z,0.12886185181728826,0.07112897699220326,0.07298070609745798,-0.012222136788413718,0.26994584042299025,1646.0,103.0,,,,,,,,,,,,
+no_synthetic_outcome_complete_case,treat_score_z,0.13213278149564028,0.0712514855999031,0.06662062087250449,-0.009228136581791668,0.27349369957307224,1625.0,101.0,,,,,,,,,,,,
+stabilized_ipw_same_estimand,treat_score_z,0.13514981425451364,,,,,,,0.06893244475474065,0.0527062962599607,-0.001610192835994645,0.27190982134502195,1625.0,101.0,999.0,999.0,-0.0033322132011041616,0.27905742011632295,0.062062062062062065,False

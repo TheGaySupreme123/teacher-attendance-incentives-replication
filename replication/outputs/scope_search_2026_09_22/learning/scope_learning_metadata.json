@@ -1,0 +1,46 @@
+{
+  "command": "python3 scripts/run_scope_learning_family.py",
+  "working_directory": "/Users/shayb/Downloads/112523-V1",
+  "timestamp_utc": "2026-09-22T10:57:52.688225+00:00",
+  "python": "3.13.4 (v3.13.4:8a526ec7cbe, Jun  3 2025, 21:14:54) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "pandas": "2.3.0",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3",
+  "script_sha256": "88f935f9c5562df301af0b918bc2344780b135252e5a5a08ce3da489c5f155f6",
+  "attrition_source_sha256": "399e377ccb850b9796c130e7f70c71a536ec1056ca58d708d00c9d7a17569c47",
+  "specs_source_sha256": "7291338195dc3e13f45ce81c3da84de71be15da675ee3122f14ae072a7ff9f97",
+  "plan_sha256": "dc557e249fdaef473ee8cd83cd93baa07fa804297ca534a77eeaa9eb9a245d3c",
+  "observed_indicator": "R == 1 from run_direction02_attrition.prepare_data",
+  "n_observations": 1625,
+  "n_schools": 101,
+  "unique_school_child_keys": 1610,
+  "repeated_school_child_rows": 30,
+  "score_reference_schools": 107,
+  "score_mean": 34.261680603027344,
+  "score_sd": 10.463175773620605,
+  "outcomes": {
+    "math": "z_add_post_math",
+    "language": "z_add_post_lang",
+    "total": "z_add_post_total"
+  },
+  "base_terms": [
+    "treat",
+    "teacher_score_z",
+    "treat_score_z",
+    "pre_total_v",
+    "pre_total_w",
+    "pre_writ"
+  ],
+  "block_terms": [
+    "block_2",
+    "block_3",
+    "block_4",
+    "block_5"
+  ],
+  "multiplicity_adjustment": "Holm across exactly three domain interactions within each family",
+  "joint_test": "math/language interaction Wald F(2,G-1) with same-school residual cross-covariance; chi-square p also reported",
+  "no_cutoffs": true,
+  "no_outcome_reselection": true,
+  "analysis_status": "Frozen theory-led three-outcome family; individual results shown with Holm adjustment; no empirical model hunting."
+}
